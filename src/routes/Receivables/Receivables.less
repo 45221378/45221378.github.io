@@ -1,0 +1,103 @@
+.receivables{
+    .am-tabs-default-bar-content .am-tabs-default-bar-underline{
+        border-color:  @receivables-active;
+    }
+    .am-tabs-default-bar-tab{
+        color: @placeholder-color;
+        font-size: 16px;
+        &-active{
+            color: @font-333;
+            &::after{
+                background-color: @receivables-active;
+                opacity: 0.5;
+            }
+        }
+    }
+    &-content{
+        padding: 10px 0;
+        position: relative;
+        &-list{
+            .am-list-item{
+                border-bottom: 1px solid @border-color;/*no*/
+                font-size: 14px;
+                color: @font-333;
+                &:nth-last-of-type(1){
+                    border-bottom: none;
+                }
+                .am-list-line{
+                    border-bottom: none;
+                    &::after{
+                        display: none !important;
+                    }
+                    .am-list-content{
+                        color: @font-333;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    .am-list-extra{
+                        color: @font-666;
+                        line-height: 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .am-list-body::before,.am-list-body::after{
+                display: none !important;
+            }
+        }
+    }
+    &-payment{
+        padding: 10px;
+        &-list{
+            &-item{
+                background-color: @bg-white;
+                padding: 14px 0;
+                position: relative;
+                margin-bottom: 10px;
+                &:nth-last-of-type(1){
+                    margin-bottom: 0;
+                }
+                h3{
+                    font-weight: bold;
+                    color: @font-333;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding:0 12px 14px;
+                    border-bottom: 1px dashed @border-color;/*no*/
+                    span{
+                        font-size: 12px;
+                        margin-left: 5px;
+                    }
+                }
+                &-content{
+                    padding: 5px 12px 0;
+                    p{
+                        font-size: 12px;
+                        line-height: 18px;
+                        padding-top: 10px;
+                        color: @font-666;
+                    }
+                }
+                &::before,&::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 9px;
+                    width: 9px;
+                    background: #f5f5f5;
+                    transform: rotateZ(45deg);
+                    top: 37px;
+                    border-radius:50%;
+                }
+                &::before{
+                    left: -5px;
+                }
+                &::after{
+                    right: -5px;
+                }
+            }
+        }
+    }
+}

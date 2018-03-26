@@ -1,0 +1,119 @@
+.stages{
+    &-content{
+        padding: 10px 0 0;
+        &-input{
+            .am-textarea-label{
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+                color: @font-333;
+            }
+            .am-textarea-control{
+                padding: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-right: 15px;
+            }
+            textarea{
+                font-size: 12px;
+                color: @font-666;
+                white-space: normal;
+                word-break: break-all;
+                line-height: 16px;
+                text-align: right;
+            }
+            .am-input-control input{
+                text-align: right;
+                font-size: 14px;
+                color: @font-666;
+            }
+            .am-input-control {
+                input::-webkit-input-placeholder,input::-moz-input-placeholder,input::-ms-input-placeholder{
+                    color: @placeholder-color;
+                    font-size: 14px;
+                }
+            }
+        }
+        .am-list-item {
+            height: 50px;
+            border-bottom:1px solid @border-color;/*no*/
+            .am-list-line {
+                height: 50px;
+                line-height: 50px;
+                .am-input-label,.am-list-content,.am-list-extra{
+                    font-size: 14px;
+                }
+                .am-input-label,.am-list-content{
+                    color: @font-333;
+                }
+            }
+        }
+    }
+    &-footer{
+        background-color: @bg-white;
+        &-list{
+            &-item{
+                font-size: 12px;
+                padding: 6px 10px;
+                line-height: 18px;
+                display: flex;
+                justify-content: space-between;
+                label{
+                    color: @placeholder-color;
+                }
+                span{
+                    color: @one-price-color;
+                }
+            }
+        }
+    }
+    .am-button-primary{
+        background-color:@primary-color;
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-indent: 3px;
+        line-height: 40px;
+        height: 40px;
+        margin: 30px 10px 0;
+        &.am-button-disabled{
+            opacity:0.2;
+        }
+    }
+    &-success{
+        &-code{
+            background: @bg-white;
+            margin: 70px 76px 23px;
+            padding: 7px;
+            box-shadow: 0px 6px 13px 0px rgba(177,177,177,0.14);
+            span{
+                padding-top: 10px;
+                padding-left: 17px;
+                font-size: 12px;
+                line-height: 18px;
+                color: @font-333;
+            }
+            p{
+                padding-bottom: 10px;
+                padding-left: 17px;
+                line-height: 20px;
+                color: @placeholder-color;
+                font-size: 12px;
+            }
+            &-wrapper{
+                padding: 20px;
+                border-top: 1px solid @border-color;/*no*/
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        &-tip{
+            font-size: 14px;
+            color: @font-666;
+            line-height: 20px;
+            text-align: center
+        }
+    }
+}

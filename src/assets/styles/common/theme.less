@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+}
+body{
+  font-family: "PingFang SC","STHeit","Microsoft YaHei",Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC","Hiragino Sans GB",Simsun,sans-self;
+  background-color: @bg-f5 !important;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+  &:link,&:visited,&:hover,&:active{
+    text-decoration: none;
+  }
+}
+//去点击阴影
+a,img,button,input,textarea{
+  outline: none;
+  font-size:inherit;
+  -webkit-tap-highlight-color:rgba(255,255,255,0);
+}
+.iconfont{
+  font-size: inherit;
+}
+.theme-bg-color{
+  background-color: #F96445;
+}
+.theme-bg-image{
+  background-image: linear-gradient(-90deg, #F96445 5%, #FE7F45 100%);
+}
+.panelBg{
+  background-color: #ffffff;
+}
+@borderColor:#dfdfdf;
+
+.theme-border{
+  border: 1px solid @borderColor;
+}
+.ant-row-layout{
+  min-width: 1000px;
+}
+.price{
+  color: #FF4444;
+}
+.btn{
+  text-align: center;
+  font-size: 14px;
+  padding: 12px;
+  border: none;
+  &_block{
+    margin: 10px auto;
+    color: #fff;
+    display: block;
+    background: #4180E8;
+  }
+}
+#root{
+  .container;
+  overflow: hidden;
+}
+.dot{
+  position: relative;
+  &:before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #E8E9EC;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 5px auto -12px;
+  }
+  &_blue{
+    &:before{
+      background-color: #5E98E3;
+    }
+  }
+  &_orange{
+    &:before{
+      background-color: #F8BA40;
+    }
+  }
+}
+.loadContent{
+  background-color: #fff;
+  padding: 20px;
+}
+button{
+  border: none;
+}

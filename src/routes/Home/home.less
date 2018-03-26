@@ -1,0 +1,110 @@
+.home{
+  &-container{
+    min-height: 100%;
+    background: url(../../assets/images/home-bg.png) no-repeat left top;
+    background-size: 100% auto;
+    text-align: center;
+    &-order{
+      display: inline-block;
+      height: 166px;
+      width: 166px;
+      line-height: 166px;
+      background: url(../../assets/images/home-circle.png) no-repeat center;
+      background-size: cover;
+      font-size: 24px;
+      color: @font-white;
+      margin-top:70px;
+    }
+    &-list{
+      display: inline-block;
+      width: 345px;
+      height: 222px;
+      border-radius:7px;
+      background-color: @bg-white;
+      margin-top: 70px;
+      padding: 10px 0;
+      &-item{
+        float: left;
+        width: 50%;
+        text-align: center;
+        height: 50%;
+        a{
+          display: block;
+          height: 100%;
+          padding-top:27px;
+          color: @font-666;
+        }
+        span{
+          display: block;
+          font-size: 12px;
+          line-height: 18px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+  &-notice{
+    &.am-modal-popup{
+      width: 300px;
+      border-radius: 10px;
+      position: absolute;
+      left: 10%;
+      top:177px;
+    }
+    .am-modal-content{
+      overflow: visible;
+      border-radius:10px;
+    }
+    .am-modal-body{
+      padding-top:65px;
+      padding-bottom:20px;
+    }
+    .am-modal-close{
+      right: 10px;
+      line-height: 20px;
+      &-x{
+        width: 14px;
+        height: 14px;
+      }
+    }
+    &-img{
+      height: 131px;
+      width: 135px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%) translateY(-50%);
+      background: url(../../assets/images/home-notice.png) no-repeat center;
+      background-size: cover;
+    }
+    &-title{
+      margin-top: 20px;
+      line-height: 28px;
+      font-size: 20px;
+      color: @font-333;
+    }
+    &-content{
+      color: @font-666;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 15px 20px;
+      text-align: left;
+    }
+    &-btn{
+      display: inline-block;
+      width: 204px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      background-image: @btn-bg-linear;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      box-shadow:@btn-box-shadow;
+    }
+  }
+}
+
+.am-modal-mask{
+  background-color:@mask-bg;
+}

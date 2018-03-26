@@ -1,0 +1,27 @@
+.select-picker{
+    position: relative;
+    background-color: #fff;
+    .am-list-item{
+        background-color: transparent;
+        .am-list-line {
+            .am-list-extra{
+                color:transparent;
+            }
+        }
+    }
+    &-show{
+        position: absolute;
+        right: 35px;
+        top: 8px;
+        padding: 7px 0;
+        height: 34px;
+        z-index: 0;
+        text-align: right;
+        font-size: 14px;
+        color: @font-666;
+        line-height: 20px;
+        &.placeholder{
+            color: @placeholder-color;
+        }
+    }
+}

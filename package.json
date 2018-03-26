@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cross-env API_ENV=dev roadhog server",
+    "build": "roadhog build",
+    "build:test": "cross-env API_ENV=test roadhog build",
+    "build:dev": "cross-env API_ENV=devDist roadhog build",
+    "build:uat": "cross-env API_ENV=uat roadhog build",
+    "lint": "eslint --ext .js src test"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0-beta.39",
+    "amfe-flexible": "^2.2.1",
+    "antd-mobile": "^2.1.4",
+    "axios": "^0.16.2",
+    "babel-plugin-dva-hmr": "^0.4.1",
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.5",
+    "dva": "^2.1.0",
+    "echarts": "^4.0.2",
+    "history": "^4.7.2",
+    "moment": "^2.20.1",
+    "promise.prototype.finally": "^3.1.0",
+    "qs": "^6.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reset.css": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.38",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.6.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "cross-env": "^5.1.3",
+    "eslint": "^4.14.0",
+    "eslint-config-umi": "^0.1.1",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.12.0",
+    "postcss-adaptive": "^0.5.0",
+    "rc-form": "^2.1.7",
+    "redbox-react": "^1.4.3",
+    "redux-form": "^7.3.0",
+    "roadhog": "^2.0.0"
+  }
+}

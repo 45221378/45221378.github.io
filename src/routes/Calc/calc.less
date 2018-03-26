@@ -1,0 +1,102 @@
+.calc{
+    min-height:100%;
+    &-header{
+        background-color: @primary-color;
+        text-align: center;
+        color: #fff;
+        &-sum{
+            padding: 27px 0 24px;
+            span{
+                display: block;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            b{
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+        &-list{
+            padding-bottom: 16px;
+            &-item{
+                float: left;
+                width: 33.33%;
+                position: relative;
+                &:after{
+                    content: '';
+                    border-right: 1px solid #fff;/*no*/
+                    height: 30px;
+                    width: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                span{
+                    display: block;
+                    font-size: 12px;
+                }
+                b{
+                    font-weight: normal;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &-content{
+        padding: 10px 0;
+        &>div>div:nth-last-of-type(1){
+            .am-list-item{
+                border-bottom:none;
+            }
+        }
+        &-input{
+            .am-input-control input{
+                text-align: right;
+                font-size: 14px;
+                color: @font-666;
+            }
+            .am-input-control input::-webkit-input-placeholder{ /*WebKit browsers*/
+                color: @placeholder-color;
+                font-size: 14px;
+            }
+            .am-input-control input::-moz-input-placeholder{ /*Mozilla Firefox*/
+                color: @placeholder-color;
+                font-size: 14px;
+            }
+            .am-input-control input::-ms-input-placeholder{ /*Internet Explorer*/
+                color: @placeholder-color;
+                font-size: 14px;
+            }
+        }
+        .am-list-item {
+            height: 50px;
+            border-bottom:1px solid @border-color;/*no*/
+            .am-list-line {
+                height: 50px;
+                line-height: 50px;
+                .am-input-label,.am-list-content,.am-list-extra{
+                    font-size: 14px;
+                }
+                .am-input-label,.am-list-content{
+                    color: @font-333;
+                }
+            }
+        }
+    }
+    &-footer{
+        padding: 20px 10px;
+    }
+    &-btn{
+        &.am-button-primary{
+            background-color:@primary-color;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-indent: 3px;
+            &.am-button-disabled{
+                opacity:0.2;
+            }
+        }
+    }
+}
