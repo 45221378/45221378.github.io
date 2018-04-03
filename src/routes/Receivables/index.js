@@ -121,7 +121,7 @@ export default class Receivables extends React.Component{
             {title:'已支付',key:'paid'},
             {title:'支付中',key:'paying'}
         ];
-        const {match:{params:{item='default',status}},history} = this.props;
+        const {match:{params:{item='default'}},history} = this.props;
         const {total:{payment,bond,other,rebate},thisStatus} = this.state;
         const domList={
             default:<div>

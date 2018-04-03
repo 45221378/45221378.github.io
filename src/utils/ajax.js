@@ -9,15 +9,7 @@ const ajax = axios.create({
     baseURL,
 });
 ajax.interceptors.request.use(function (config) {
-  const {token='',version:{appVersion,appType}} = store;
   Toast.loading('正在加载',0);
-  if(token){
-    config.headers.common['authorization']=`Bearer ${token}`;
-  }
-  if(appVersion||appType){
-    config.headers.common['appVersion']=appVersion;
-    config.headers.common['appType']=appType;
-  }
   return config;
 }, function (error) {
   // 对请求错误做些什么
@@ -26,14 +18,14 @@ ajax.interceptors.request.use(function (config) {
 });
 const goLogin = ()=>{
   setTimeout(()=>{
-    if(location.href.indexOf('ninjaTurtleLogin')===-1){
-      location.href='ninjaTurtleLogin'
+    if(location.href.indexOf('login')===-1){
+      location.href='login'
     }
   },4000)
 };
 ajax.interceptors.response.use(function (response) {
   let {head, body}=response.data;
-  if(head.retCode==='success'){
+  if(head.retCode==='0000'){
     Toast.hide();
     return body;
   }else{

@@ -1,4 +1,4 @@
-import React,{component} from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { connect } from 'dva';
 

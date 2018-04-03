@@ -83,7 +83,7 @@ export default class AddGood extends Component {
                         <Field title="贴息方式" component={FormItem} extra="请选择分期期数" name="qishu" type="select" cols={1} arr={arr} />
                     </li>
                 </ul>
-               
+
             </section>
         )
     }

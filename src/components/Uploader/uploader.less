@@ -1,0 +1,53 @@
+.uploader{
+    padding: 10px;
+    &-list{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .file-item{
+            margin: 0 5px 5px 0;
+            &:nth-of-type(4n){
+                margin-right: 0;
+            }
+        }
+        &-wrapper{
+            position: relative;
+            .iconfont.icon-roundclosefill{
+                position: absolute;
+                font-size: 18px;
+                color: @mask-bg;
+                right: 3px;
+                top: 3px;
+            }
+        }
+    }
+    &-btn{
+        position: relative;
+        height: 80px;
+        width: 80px;
+        border: 1px solid @border-color;/*no*/
+        text-align: center;
+        line-height: 80px;
+        #picker{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        .webuploader-pick~div{
+            left: 0 !important;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            height: auto !important;
+            width: auto !important;
+            opacity: 0;
+            input{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

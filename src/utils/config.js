@@ -1,15 +1,15 @@
 let  baseURL;
 switch (process.env.API_ENV){
   case 'dev':
-    baseURL = 'http://www.1v1.one:8132/loan_srv/';
+    baseURL = 'http://192.168.23.10:80/organservice/mobile';
     break;
   case 'test':
-    baseURL = 'http://www.1v1.one:8132/loan_srv/';
+    baseURL = 'http://192.168.23.10:80/organservice/mobile';
     break;
   case 'uat':
-    baseURL = 'http://www.1v1.one:1835/loan_srv/';
+    baseURL = 'http://192.168.23.10:80/organservice/mobile';
     break;
   default:
-    baseURL = 'http://c2.hfenq.cn:7001/loan_srv/';
+    baseURL = 'http://192.168.23.10:80/organservice/mobile';
 }
 export default baseURL;

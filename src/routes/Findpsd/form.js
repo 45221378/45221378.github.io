@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'dva/router';
-// import { InputItem, Picker, List } from 'antd-mobile';
+// import { InputItem, Picker, List, Toast } from 'antd-mobile';
 import { Btn, FormItem } from './../../components';
 import { reduxForm, Field } from 'redux-form';
 import validate from '../../utils/validate';
@@ -36,6 +36,9 @@ const baseInfoFormValidate = validate({
     warn: (values) => {
         let warn = {};
         let error = baseInfoFormValidate(values);
+        if (error.mobile) {
+            warn._warning = error.mobile;
+        }
         return warn;
     }
 })
@@ -51,15 +54,46 @@ export default class Form extends React.Component {
             text: '获取验证码',
             disabled: false,
             count: props.count || 60,
-            invitePhone: props.match.params.invitePhone,
-            shareChannel: props.match.params.shareChannel
+            imgHint:'none'
         }
         this.timer = null;
         // this.start = this.start.bind(this);
     }
+
+    getSmsCode = (e)=>{
+        e.preventDefault();
+        const { warning, dispatch  } = this.props;
+        if (warning) {
+            Toast.info(warning)
+        } else {
+            //这里是接口请求
+            this.setState({
+                imgHint:'block'
+            })
+        }
+    }
+    closeImgCode = ()=>{
+        this.setState({
+            imgHint: 'none',
+            pTips: '',
+        })
+    }
+
+    checkImg = ()=>{
+        const capCode = this.refs.imgCode.value;
+        if (capCode){
+            console.log(11);
+
+        }else{
+            this.setState({
+                pTips: '请输入图形验证码'
+            })
+        }
+    }
+
     render() {
-        const { handleSubmit, bgImgShow, telephone, capCodeSrc, text, disabled } = this.props;
-        const { pTips } = this.state;
+        const { handleSubmit } = this.props;
+        const { pTips, disabled, imgHint, text, capCodeSrc } = this.state;
         const arr = [{ value: 0, label: '商铺1' }, { value: 1, label: '请选择商铺2' }, { value: 2, label: '请选择商铺3' }];
         return (
             <section className="findPsd">
@@ -67,21 +101,20 @@ export default class Form extends React.Component {
                     <ul className="form-list">
                         <li className="form-list-item">
                             <label className="form-list-label form-list-border">
-                                <input type="tel" placeholder="请输入手机号" />
+                                <Field ref="mobile" component="input" className="login-account" type="tel" placeholder="请输入手机号" name="mobile" maxLength="11" />
                             </label>
                         </li>
                         <li className="form-list-item">
                             <label className="form-list-label form-list-border">
-                                {/* <input type="tel" placeholder="请输入手机号" /> */}
                                 <Field component={FormItem} extra="请选择商铺" name="shops" type="select" cols={1} arr={arr} thisName="shops" />
                             </label>
                         </li>
                         <li className="form-list-item">
                             <label className="form-list-label">
-                                <input type="tel" placeholder="请输入短信验证码" />
-                                <button className="getCode" disabled="disabled">
-                                    获取短信码
-                            </button>
+                                <Field component="input" type="text" placeholder="请输入短信验证码" name="code" />
+                                <button className="getCode" onClick={e => this.getSmsCode(e)} disabled={disabled}>
+                                    {text}
+                                </button>
                             </label>
                         </li>
                         <li className="form-list-tips">
@@ -89,13 +122,14 @@ export default class Form extends React.Component {
                         </li>
                         <li className="form-list-item">
                             <label className="form-list-label form-list-border">
-                                <input type="tel" placeholder="设置密码（输入6-20位数字或字母）" />
+
+                                <Field component="input" type="text" placeholder="设置密码（输入6-20位数字或字母）" name="psd" />
                             </label>
                         </li>
                     </ul>
                     <Btn>确定</Btn>
-                </form> 
-                <section className="commonhint" style={{ display: 'none' }}>
+                </form>
+                <section className="commonhint" style={{ display: imgHint }}>
                     <section className="commonhint-small bounceInDown">
                         <img className="commonhint-small-group" onClick={this.closeImgCode} src={require("../../assets/images/group.png")} />
                         <h5 className="commonhint-small-h5">请输入图形验证码</h5>
@@ -111,7 +145,7 @@ export default class Form extends React.Component {
                                 {/*}*/}
                             </label>
                             {/* <button className="submitImgCode" type="button" onClick={this.sbumitImg}>确定</button> */}
-                            <Btn className="submitImgCode">确定</Btn>
+                            <Btn className="submitImgCode" onClick={this.checkImg}>确定</Btn>
                         </form>
                     </section>
                 </section>

@@ -1,3 +1,4 @@
+import dynamic from 'dva/dynamic';
 import 'amfe-flexible';
 import './assets/styles/index.less';
 import { Router, Route, Switch } from 'dva/router'
@@ -25,19 +26,11 @@ import {
   SearchDetail,
 } from './routes';
 
-
-// import dynamic from 'dva/dynamic';
-
 function RouterConfig({ history, app}) {
-  // const IndexPage = dynamic({
-  //   app,
-  //   component: () => import('./routes/IndexPage'),
-  // });
-  // const Example = dynamic({
-  //   app,
-  //   component: () => import('./routes/Example'),
-  // });import ChangePsd from './routes/ChangePsd/index';
-
+  const UploadVoucher = dynamic({
+    app,
+    component: () => import('./routes/UploadVoucher/index'),
+  });
   return (
     <Router history={history}>
       <Switch>
@@ -53,6 +46,7 @@ function RouterConfig({ history, app}) {
         <Route path="/oneKey/setStages/:id?" exact component={SetStages} />
         <Route path="/oneKey/stageSuccess/:id?" exact component={StageSuccess} />
         <Route path="/receivables/:item?/:status?" component={Receivables} />
+        <Route path="/upload/:orderId?" component={UploadVoucher} />
         <Route path="/main" component={Main} />
         <Route path="/calc" component={Calc} />
         <Route path="/login" component={Login} />

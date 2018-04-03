@@ -1,4 +1,4 @@
-import React,{component} from 'react';
+import React from 'react';
 import { connect } from 'dva';
 
 export default class NoticeDetail extends React.Component{

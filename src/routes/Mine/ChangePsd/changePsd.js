@@ -52,8 +52,8 @@ export default class ChangePsd extends React.Component {
         return (
             <section className="changePsd">
                <form className="form">
-                    <Field className="form-item" component={FormItem} label="原始密码" name="oldPsd" type="password" maxLength="20" placeholder="请输入原始密码" />
-                    <Field className="form-item" component={FormItem} label="新密码" name="oldPsd" type="password" maxLength="20" placeholder="请输入6-20位新密码" />
+                    <Field className="form-item" component={FormItem} title="原始密码" name="oldPsd" type="password" maxLength="20" placeholder="请输入原始密码" />
+                    <Field className="form-item" component={FormItem} title="新密码" name="oldPsd" type="password" maxLength="20" placeholder="请输入6-20位新密码" />
                     <Btn className="submit">确定</Btn>
                </form>
             </section>

@@ -62,7 +62,7 @@ export default class FormItem extends Component {
               onOk={v => this.selectItem(v)}
             >
              
-            <List.Item arrow="horizontal">{title}{tips && <i className="iconfont icon-dianpu" onClick={e => this.showTips(tips,e)}></i>}</List.Item>
+            <List.Item arrow="horizontal">{title}{tips && <i className="iconfont icon-certificationHelp tips" onClick={e => this.showTips(tips,e)}></i>}</List.Item>
             </Picker>
           </div>
         break;

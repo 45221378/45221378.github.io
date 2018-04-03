@@ -18,14 +18,14 @@ ajax.interceptors.request.use(function (config) {
 });
 const goLogin = ()=>{
   setTimeout(()=>{
-    if(location.href.indexOf('ninjaTurtleLogin')===-1){
-      location.href='ninjaTurtleLogin'
+    if(location.href.indexOf('login')===-1){
+      location.href='login'
     }
   },4000)
 };
 ajax.interceptors.response.use(function (response) {
   let {head, body}=response.data;
-  if(head.retCode==='success'){
+  if(head.retCode==='0000'){
     return body;
   }else{
     const {msg} = head;

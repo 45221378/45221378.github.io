@@ -1,4 +1,4 @@
-import React,{component} from 'react';
+import React from 'react';
 import { connect } from 'dva';
 import { classnames } from 'classnames';
 
@@ -14,7 +14,7 @@ export default class DashedBtn extends React.Component{
   render() {
     let classNames = require('classnames');
     let { type, onClick, className} = this.props;
-    console.log(this.props);
+    // console.log(this.props);
     if (!type) {
       type = 'primary'
     }

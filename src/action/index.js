@@ -1,1 +1,0 @@
-export {checkBox} from './checkbox';

@@ -1,9 +1,10 @@
 import React from 'react';
-import {Button,SearchBar,WingBlank,WhiteSpace} from 'antd-mobile'
+import {Button,SearchBar} from 'antd-mobile'
 import {Link,withRouter} from 'dva/router'
 
 import './OneKey.less';
 
+import ajax from '../../utils/ajax'
 @withRouter
 export default class OneKey extends React.Component{
     constructor(props){
@@ -28,6 +29,21 @@ export default class OneKey extends React.Component{
             </Link>
         </li>))
     }
+    searchGoods=(val)=>{
+        // console.log(val);
+    }
+    componentDidMount(){
+        ajax({
+            method:'post',
+            url:'/listProduct',
+            data:{
+                organId:'CREDIT_SYS_REQ',
+                phone:'13333333333',
+                proName:'',
+                token:''
+            }
+        })
+    }
     render(){
         const {is3C,goodsList} = this.state;
         const {history} = this.props;
@@ -39,12 +55,12 @@ export default class OneKey extends React.Component{
             </div>:
             <div className="one-content">
                 <div className="one-content-wrapper">
-                    <SearchBar placeholder="可输入商品名称"/>
+                    <SearchBar placeholder="可输入商品名称" cancelText="搜索" onSubmit={this.searchGoods} onCancel={this.searchGoods} showCancelButton/>
                     <ul className="one-content-list">
                         {this.getList()}
                     </ul>
                 </div>
-                {is3C&&<Button type="primary" onClick={()=>{history.push('/oneKey/empty')}}>其他商品</Button>}
+                {is3C&&<Button type="primary" onClick={()=>{history.push('/oneKey/setStages/empty')}}>其他商品</Button>}
             </div>}
         </div>)
     }

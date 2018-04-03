@@ -1,0 +1,162 @@
+.upload{
+    .am-search{
+        background-color: @bg-f5;
+    }
+    .am-search-cancel{
+        color: @placeholder-color;
+        font-size: 12px;
+    }
+    .am-search-input{
+        border-radius: 15px;
+        .am-search-clear{
+            top: 7px;
+            right: 3px;
+        }
+        input{
+            font-size: 12px;
+            color: @font-666;
+        }
+        .am-search-synthetic-ph {
+            min-width: 120px;
+            line-height: 28px;
+            height: 28px;
+            &-icon{
+                display: inline-block;
+                height: 12px;
+                width: 12px;
+                margin-top: 2px;
+                background-size: cover;
+                vertical-align: top;
+            }
+            &-placeholder{
+                display: inline-block;
+                height: 16px;
+                line-height: 16px;
+                font-size: 12px;
+                color: @placeholder-color;
+                vertical-align: top;
+            }
+            &-container{
+                height: 16px;
+                line-height: 16px;
+                display: inline-block;
+            }
+        }
+    }
+    &-list{
+        &-content{
+            padding:0 10px;
+            &-item{
+                background-color: @bg-white;
+                padding: 14px 0;
+                position: relative;
+                margin-bottom: 10px;
+                &:nth-last-of-type(1){
+                    margin-bottom: 0;
+                }
+                h3{
+                    font-weight: bold;
+                    color: @font-333;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding:0 12px 14px;
+                    border-bottom: 1px dashed @border-color;/*no*/
+                    span{
+                        font-size: 12px;
+                        color: @one-price-color;
+                        font-weight: normal;
+                    }
+                }
+                &-content{
+                    padding: 5px 12px 0;
+                    position: relative;
+                    p{
+                        font-size: 12px;
+                        line-height: 18px;
+                        padding-top: 10px;
+                        color: @font-666;
+                        &.special{
+                            color: @placeholder-color;
+                        }
+                    }
+                    .am-button-primary{
+                        background-color: @primary-color;
+                        position: absolute !important;
+                        right: 10px;
+                        bottom: 3px;
+                        padding: 6px 17px;
+                        line-height: 18px;
+                        font-size: 12px;
+                        border-radius: 4px;
+                        width: auto;
+                        height: auto;
+                    }
+                }
+                &::before,&::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 9px;
+                    width: 9px;
+                    background: #f5f5f5;
+                    transform: rotateZ(45deg);
+                    top: 37px;
+                    border-radius:50%;
+                }
+                &::before{
+                    left: -5px;
+                }
+                &::after{
+                    right: -5px;
+                }
+            }
+        }
+    }
+    &-photos{
+        padding: 10px;
+        p{
+            color: @font-666;
+            font-size: 12px;
+            line-height: 16px;
+            padding: 4px 0;
+        }
+        &-wrapper{
+            background-color: @bg-white;
+            min-height: 364px;
+            box-shadow: 0px 0.5px 0px 0px rgba(223,223,223,0.5);
+            
+        }
+        .am-button-primary{
+            background-color:@primary-color;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-indent: 3px;
+            line-height: 40px;
+            height: 40px;
+            margin: 123px 0 0;
+            &.am-button-disabled{
+                opacity:0.2;
+            }
+        }
+
+        //upload样式
+        .iconfont.icon-xiangji{
+            font-size: 34px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: @placeholder-color;
+        }
+        .add-btn{
+            font-weight: normal;
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: @placeholder-color;
+        }
+    }
+}

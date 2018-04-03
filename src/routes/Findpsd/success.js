@@ -12,8 +12,8 @@ export default class Success extends React.Component {
 
     toLogin=()=>{
         const {history} = this.props;
-        // history.push('/login')
-        console.log(this.props);
+        history.push('/login')
+        // console.log(this.props);
     }
 
     render() {

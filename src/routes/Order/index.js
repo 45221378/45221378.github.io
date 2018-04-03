@@ -1,8 +1,6 @@
-import React,{component} from 'react';
-import { connect } from 'dva';
-import {withRouter,Link} from 'dva/router'
+import React from 'react';
+import {withRouter} from 'dva/router'
 import { Tabs, List,SearchBar ,Modal} from 'antd-mobile';
-import {Search,SpaceTips} from '../../components'
 
 import './order.less'
 import '../Message/messageCenter.less'

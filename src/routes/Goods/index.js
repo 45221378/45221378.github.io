@@ -1,4 +1,4 @@
-import React, { component } from 'react';
+import React from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 import { Search } from '../../components'
@@ -30,7 +30,7 @@ export default class OrderList extends React.Component {
 
     const { match: { params: { item = 'default', status } }, history } = this.props;
     const orderList = {
-      default: 
+      default:
         <section className="orderList goodsList">
           {/* <SearchBar placeholder="可输入客户姓名、手机号、订单号" /> */}
           <Search />

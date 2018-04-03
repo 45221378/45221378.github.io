@@ -7,6 +7,7 @@ module.exports = {
     "@font-333":"rgba(51,51,51,1)",
     "@font-666":"rgba(102,102,102,1)",
     "@font-999":"rgba(153,153,153,1)",
+    "@font-0090F2": "#0090F2",
     "@border-color":"#DFDFDF",
     "@border-color-footer":"#CECECE",
     "@btn-bg-linear":"linear-gradient(left,#00AEFF,#0090F2)",

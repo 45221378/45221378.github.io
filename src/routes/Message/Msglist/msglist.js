@@ -1,5 +1,4 @@
-import React,{component} from 'react';
-import { connect } from 'dva';
+import React from 'react';
 import classnames from 'classnames';
 import {Link,withRouter} from 'dva/router'
 

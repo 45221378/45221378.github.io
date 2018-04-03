@@ -1,5 +1,4 @@
 @import (reference) '../../../assets/styles/common/help.less';
-
 .searchDetail {
     padding: 12px 6px 0;
     &-list {
@@ -10,21 +9,21 @@
         .title {
             height: 30px;
             font-size: 16px;
-            color: #333;
+            color: @font-333;
             line-height: 30px;
-            border-bottom: 1px solid#ddd;
+            border-bottom: 1px solid @border-color;
+            /*no*/
         }
         .item {
             // display: flex;
             height: 18px;
             font-size: 13px;
-            color: #666;
+            color: @font-666;
             line-height: 18px;
             margin-top: 10px;
-            &.last{
+            &.last {
                 margin-bottom: 15px;
-            }
-            // label {
+            } // label {
             //     flex: 1;
             // }
             // span {
@@ -36,24 +35,24 @@
             //     white-Space: nowrap;
             // }
         }
-
-        &.plan{
+        &.plan {
             margin-bottom: 40px;
-            .item{
+            .item {
                 height: 44px;
                 line-height: 44px;
                 margin-top: 0;
                 align-items: center;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid @border-color;
+                /*no*/
                 padding: 0 5px;
-                &.head{
-                    color: #333;
+                &.head {
+                    color: @font-666;
                 }
-                span{
+                span {
                     // .flex1();
                     width: 33%;
                     display: inline-block;
-                    &.right{
+                    &.right {
                         text-align: right;
                     }
                 }
@@ -69,9 +68,9 @@
             height: 30px;
             background: #fff;
             line-height: 30px;
-            color: #333;
+            color: @font-333;
             font-size: 16px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid @border-color; /*no*/
         }
         .am-list-item {
             padding-left: 0;
@@ -83,11 +82,11 @@
         }
         .am-list-content {
             font-size: 13px;
-            color: #333;
+            color: @font-333;
         }
         .am-list-extra {
             flex: 2;
-            color: #666;
+            color: @font-666;
             font-size: 13px;
         }
     }

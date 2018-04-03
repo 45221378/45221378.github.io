@@ -1,4 +1,4 @@
-import React,{component} from 'react';
+import React from 'react';
 import { connect } from 'dva';
 import {Link,withRouter} from 'dva/router'
 import {Tabs, List } from 'antd-mobile';
@@ -17,7 +17,6 @@ export default class MessageCenter extends React.Component{
 
   }
   changeList=(key)=>{
-    console.log(key);
     this.setState({
       showIdx:key,
       showNotice: key=='msg'?true:false,
