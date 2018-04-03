@@ -15,6 +15,7 @@ export default class Calc extends React.Component{
   }
   getValues=()=>{
       this.props.form.validateFields((err,values)=>{
+          console.log(err);
           console.log(values);
       })
   }

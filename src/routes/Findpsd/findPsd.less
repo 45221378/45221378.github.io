@@ -1,0 +1,190 @@
+@import (reference) '../../assets/styles/common/help.less';
+@findPsd: findPsd;
+.@{findPsd} {
+    &-form {
+        .padT(12px);
+        color: @font-333;
+        .form-list {
+            .marB(30px);
+            &-item {
+                width: 100%;
+                background: #fff;
+                .padLR(10px);
+            }
+            &-border {
+                .borB();
+            }
+            &-label {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                .fs(14px);
+                input {
+                    border: none;
+                    width: 100%;
+                    .placeholder(@placeholder-color);
+                    .flex1();
+                }
+                .getCode {
+                    // width: 140px;
+                    border: none;
+                    outline: none;
+                    color: @one-discount;
+                    background: #fff;
+                    float: right;
+                }
+                .select-picker {
+                    background: transparent;
+                    width: 100%;
+                    height: 100%;
+                    .flex1();
+                    align-items: center;
+                    display: flex;
+                    &-show {
+                        // right: 0;
+                        left: 0;
+                        position: relative;
+                        padding: 0;
+                        top: 0;
+                        height: auto;
+                        color: @font-333;
+                        &.placeholder {
+                            color: @font-999;
+                        }
+                        +div {
+                            // flex: 1;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                    .am-list-item {
+                        height: 100%;
+                    }
+                    .am-list-arrow {
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+            &-tips {
+                .fs(12px);
+                height: 40px;
+                .lineH(40px);
+                .padR(10px);
+                text-align: right;
+                .getVoiceCode {
+                    color: @one-discount;
+                }
+            }
+        }
+    }
+    &-success {
+        .padT(106px);
+        .success-img {
+            width: 111px;
+            height: 121px;
+            display: block;
+            margin: 0 auto;
+        }
+        .success-tips {
+            color: @placeholder-color;
+            .fs(16px);
+            text-align: center;
+            height: 44px;
+            .lineH(22px);
+            .marB(18px);
+            .marT(6px);
+        }
+    }
+}
+
+.commonhint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, .8);
+    padding: 0 20px;
+    &-small {
+        // width: 100%;
+        background: #fff;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &-group {
+            position: absolute;
+            top: -54px;
+            right: 10px;
+            width: 30px;
+            height: 56px;
+        }
+        h5 {
+            width: 100%;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            color: @font-333;
+            .fs(16px);
+            margin-bottom: 8px;
+            border-bottom: 1px solid @border-color-footer;
+            /*no*/
+        }
+        .p-tips {
+            color: @tips-color;
+            .fs(12px);
+            text-align: left;
+            padding-left: 11px;
+        }
+        .hint-form {
+            padding: 8px 11px 21px 11px;
+            label {
+                border-radius: 5px;
+                height: 45px;
+                width: 100%;
+                padding: 8px 0 8px 7px;
+                display: block;
+                position: relative;
+                i {
+                    .fs(15px);
+                    color: #706e6f;
+                    line-height: 30px;
+                }
+                input {
+                    line-height: 30px;
+                    color: @font-666;
+                    font-size: 14px;
+                    margin-left: 8px;
+                    border: none;
+                    border-bottom: 1px solid @border-color;
+                    width: 265px;
+                }
+                img {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 0;
+                    height: 24px;
+                    width: 64px;
+                }
+            }
+            .submitImgCode {
+                margin-top: 8px;
+                height: 40px;
+                width: 100%;
+                display: block;
+                border: none;
+                overflow: hidden;
+                position: relative; // background: #0090F2;
+                // border-radius: 4px;
+                // color: #fff;
+                // .fs(14px);
+            }
+        }
+    }
+}

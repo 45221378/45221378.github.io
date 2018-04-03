@@ -53,11 +53,11 @@ export default class Footer extends React.Component{
                 <i className={`iconfont ${activeKey==='goods'?"icon-shangpin":"icon-shangpin1"}`}></i>
                 <span>商品</span>
             </Link>
-            <Link className={activeKey==='order'?'nav-active':''} key="order" to="/order">
+            <Link className={activeKey==='order'?'nav-active':''} key="order" to="/main/orderList">
                 <i className={`iconfont ${activeKey==='order'?"icon-dingdan1":"icon-dingdan"}`}></i>
                 <span>订单</span>
             </Link>
-            <Link className={activeKey==='message'?'nav-active':''} key="message" to="/main/message">
+            <Link className={activeKey==='message'?'nav-active':''} key="message" to="/main/MessageCenter">
                 <i className={`iconfont ${activeKey==='message'?"icon-xiaoxi":"icon-xiaoxi1"}`}></i>
                 <span>消息</span>
             </Link>

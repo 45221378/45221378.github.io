@@ -1,0 +1,46 @@
+@import (reference) '../../assets/styles/common/help.less';
+.addGood {
+    padding-top: 12px;
+    &-list {
+        padding-bottom: 10px; // height: 200px;
+        &-item {
+            height: 50px;
+            border-bottom: 1px solid @border-color;
+            .select-picker {
+                height: 100%; // display: flex;
+                // align-items: center;
+                .am-list-content {
+                    font-size: 14px;
+                }
+                .am-list-item {
+                    height: 50px; // display: flex;
+                    // align-items: center;
+                    border-bottom: 1px solid @border-color;
+                }
+                .select-picker-show {
+                    top: 0;
+                    bottom: 0;
+                    padding: 0;
+                    height: 50px;
+                    line-height: 50px;
+                    color: @font-333;
+                    &.placeholder {
+                        color: @placeholder-color;
+                    }
+                }
+            }
+            .am-input-item{
+                height: 100%;
+            }
+             .am-input-label {
+                font-size: 14px;
+            }
+            .am-input-control input {
+                font-size: 12px;
+                text-align: right;
+                .placeholder(@placeholder-color);
+                color: @font-333;
+            }
+        }
+    }
+}

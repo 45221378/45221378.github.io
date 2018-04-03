@@ -13,8 +13,9 @@ module.exports = {
     "@btn-blue":"rgba(0,144,242,1)",
     "@btn-box-shadow":"0 3px 3px rgba(0,174,225,.2)",
     "@mask-bg":"rgba(0,0,0,0.61) !important",
-
+    "@normal-bg":"rgba(0,0,0,0.8) !important",
     "@placeholder-color":"#9B9B9B",
+    "@tips-color": "#fd5b3f",
 
     "@one-price-color":"#F5A623",
     "@one-discount":"#71AAF7",

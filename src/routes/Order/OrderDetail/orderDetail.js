@@ -3,13 +3,22 @@ import { connect } from 'dva';
 import {Opacitybtn} from '../../../components'
 
 
+
 export default class OrderDetail extends React.Component {
+  constructor(props){
+    super(props)
+
+  }
+  goFillData=()=>{
+    const {history} = this.props;
+    history.push('/filldata');
+  };
   render() {
     return(
       <div>
         <div className="orderDetail">
           <h6>订单状态</h6>
-          <img className="img-state" src={require("../../../assets/images/shenpi.png")} alt=""/>
+          <img className="img-state" src={require("../../../assets/images/stages.png")} alt=""/>
           <section>
             <p>已还期数：<span>13/18</span></p>
             <p>分期总额：<span>￥17,800</span></p>
@@ -47,7 +56,7 @@ export default class OrderDetail extends React.Component {
             <p>审核凭证通过日期：<span>2017-12-20</span></p>
           </div>
         </div>
-        <Opacitybtn/>
+        <Opacitybtn onClick={this.goFillData}>上传凭证</Opacitybtn>
       </div>
     )
   }

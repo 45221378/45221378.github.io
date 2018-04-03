@@ -34,86 +34,89 @@
 }
 //补充联系人资料
 .fill-people{
-  .already-fill{
-    li{
-      margin-top: 12px;
-      background: #fff;
-      p{
-        font-size: 14px;
-        color: @font-333;
-        height: 50px;
-        line-height: 50px;
-        margin: 0 10px;
-        border-bottom: 1px solid #dfdfdf;
-        &:extend(.clearfix);
-        span{
-          float: right;
-        }
-      }
-      p:last-child{
-        border-bottom: none;
-      }
-    }
-  }
-  .ready-fill{
-    padding: 0 10px;
-    li{
-      background: #fff;
-      margin-top: 10px;
-      form{
-        label{
+  .contain-ul{
+    padding-bottom: 63px;
+    .already-fill{
+      li{
+        margin-top: 12px;
+        background: #fff;
+        p{
           font-size: 14px;
           color: @font-333;
           height: 50px;
-          line-height: 28px;
+          line-height: 50px;
           margin: 0 10px;
           border-bottom: 1px solid #dfdfdf;
-          display: block;
-          padding: 10px 0;
+          &:extend(.clearfix);
           span{
-            display: inline-block;
-          }
-          .icon-right{
             float: right;
-            font-size: 16px;
-          }
-          input{
-            float: right;
-            line-height: 28px;
-            border: none;
-            text-align: right;
-            width: 200px;
-            font-size: 14px;
-          }
-          input::-webkit-input-placeholder{
-            color: #9B9B9B;
           }
         }
-        label:last-child{
+        p:last-child{
           border-bottom: none;
         }
       }
+    }
+    .ready-fill{
+      padding: 0 10px;
+      li{
+        background: #fff;
+        margin-top: 10px;
+        form{
+          label{
+            font-size: 14px;
+            color: @font-333;
+            height: 50px;
+            line-height: 28px;
+            margin: 0 10px;
+            border-bottom: 1px solid #dfdfdf;
+            display: flex;
+            align-items: center;
 
-      .close{
-        background:rgba(236,236,236,1);
-        height:25px;
-        width: 100%;
-        border-radius: 4px 4px 0px 0px ;
-        i{
-          color: #9B9B9B;
-          float: right;
-          font-size: 18px;
-          line-height: 25px;
-          padding: 0 12px 0 60px;
+            span{
+              display: inline-block;
+            }
+            .icon-right{
+              float: right;
+              font-size: 16px;
+            }
+            input{
+              line-height: 28px;
+              border: none;
+              text-align: right;
+              flex: 1;
+              font-size: 14px;
+            }
+            input::-webkit-input-placeholder{
+              color: #9B9B9B;
+            }
+          }
+          label:last-child{
+            border-bottom: none;
+          }
         }
-      }
 
+        .close{
+          background:rgba(236,236,236,1);
+          height:25px;
+          width: 100%;
+          border-radius: 4px 4px 0px 0px ;
+          i{
+            color: #9B9B9B;
+            float: right;
+            font-size: 18px;
+            line-height: 25px;
+            padding: 0 12px 0 60px;
+          }
+        }
+
+      }
     }
   }
 }
-//补充同业资料
+//补充同业资料或补充其他信息
 .fill-same{
-  margin-bottom: 63px;
+  padding-bottom: 63px;
   overflow-y: auto;
   .fill-tips{
     color: #7db4fe;
@@ -136,8 +139,24 @@
           float: right;
         }
       }
+
+
       p:last-child{
         border-bottom: none;
+      }
+    }
+    .fill-other-li{
+      width:100%;
+      min-height: 164px;
+      overflow: hidden;
+      padding-bottom: 11px;
+      article{
+        line-height: 18px;
+        padding-top: 10px;
+        font-size: 14px;
+        color: @font-333;
+        margin: 0 10px;
+        height: 74px;
       }
     }
   }
@@ -146,6 +165,9 @@
     li{
       background: #fff;
       margin-top: 10px;
+      padding-bottom: 11px;
+      min-height: 164px;
+      overflow: hidden;
       form{
         label{
           font-size: 14px;
@@ -194,6 +216,55 @@
         }
       }
 
+      textarea{
+        font-size: 12px;
+        color: #9B9B9B;
+        padding: 10px;
+        width: 100%;
+        height: 100px;
+        border: none;
+      }
+
+    }
+  }
+}
+.upload-img{
+  border: 1px solid #dfdfdf;
+  width: 80px;
+  height:80px;
+  margin: 11px 0 0 11px;
+  position: relative;
+  float: left;
+  i{
+    color: #dddfe8;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  img{
+    width: 80px;
+    height:80px;
+    z-index: 99;
+  }
+}
+//下啦选择框样式
+.relationship{
+  width:100%;
+  .select-picker-show{
+    right: 20px;
+  }
+  .am-list-item{
+    padding-left: 0;
+    .am-list-line{
+      padding-right: 0;
+      .am-list-arrow{
+        margin-top: 4px;
+      }
+      .am-list-content{
+        color: #333;
+        font-size: 14px;
+      }
     }
   }
 }

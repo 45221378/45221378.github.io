@@ -40,7 +40,7 @@ export default class OneKey extends React.Component{
             <div className="one-content">
                 <div className="one-content-wrapper">
                     <SearchBar placeholder="可输入商品名称"/>
-                    <ul className="one-content-list"> 
+                    <ul className="one-content-list">
                         {this.getList()}
                     </ul>
                 </div>

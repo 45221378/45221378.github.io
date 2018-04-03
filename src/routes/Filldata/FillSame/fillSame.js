@@ -24,21 +24,6 @@ export default class Fillsame extends React.Component {
 
             </div>
           </li>
-          <li>
-            <p>
-              平台名称<span>分期乐</span>
-            </p>
-            <p>
-              账号<span>父亲读法律框架</span>
-            </p>
-            <p>
-              密码<span>*******</span>
-            </p>
-            <div>
-              <p>账单截图</p>
-
-            </div>
-          </li>
         </ul>
         <ul className="ready-fill">
           <li>
@@ -63,8 +48,8 @@ export default class Fillsame extends React.Component {
             </form>
           </li>
         </ul>
-        <DashedBtn/>
-        <Opacitybtn/>
+        <DashedBtn>添加平台</DashedBtn>
+        <Opacitybtn>提交</Opacitybtn>
       </div>
     )
   }

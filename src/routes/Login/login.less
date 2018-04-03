@@ -1,14 +1,11 @@
 @import (reference) '../../assets/styles/common/help.less';
 @login: login;
-// #root {
-//     width: 100%;
-//     min-height: 100%;
-//     background: #fff;
-// }
-
 .@{login} {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background: #fff;
     .padT(98px);
     &-header {
@@ -21,12 +18,12 @@
             .fs(30px);
         }
         span.text {
-            color: #666;
+            color: @font-666;
             .fs(18px); // font-size: 18px;
             height: 20px;
             display: inline-block;
             .padL(10px);
-            border-left: 1px solid #dfdfdf;
+            border-left: 1px solid @border-color;
         }
     }
     &-form {
@@ -38,21 +35,21 @@
             border-radius: 20px;
             display: flex;
             align-items: center;
-            color: #9b9b9b;
+            color: @placeholder-color;
             margin: 0 auto;
             margin-bottom: 20px;
             box-sizing: border-box;
             .padLR(14px);
             i {
-                .fs(20px);
+                .fs(18px);
                 .marR(5px);
             }
             input {
                 border: none;
                 outline: none;
                 .flex1();
-                color: #333;
-                .placeholder(#999);
+                color: @font-333;
+                .placeholder(@font-999);
                 .fs(14px);
             }
         }
@@ -77,10 +74,53 @@
         // width: 79px;
         // height: 22px;
         font-size: 16px;
-        color: #71AAF7;
-        // line-height: 22px;
+        color: @one-discount; // line-height: 22px;
         text-align: center;
         width: 100%;
         display: block;
+    }
+    /*picker选择器样式*/
+    .select-picker {
+        background: transparent;
+        height: 100%;
+        .flex1();
+        align-items: center;
+        display: flex;
+        &-show {
+            // right: 0;
+            left: 0;
+            position: relative;
+            padding: 0;
+            top: 0;
+            height: auto;
+            color: @font-333;
+            &.placeholder {
+                color: @font-999;
+            }
+            +div {
+                // flex: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+            }
+        }
+        .am-list-item {
+            // padding: 0;
+            height: auto;
+            min-height: 0;
+        }
+        .am-list-arrow {
+            position: absolute;
+            right: 0;
+            background-image: none;
+            width: 0;
+            height: 0;
+            border-top: 8px solid rgba(216, 216, 216, 1);
+            border-right: 6px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 8px solid transparent;
+            margin-top: 3px;
+        }
     }
 }

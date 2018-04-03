@@ -1,8 +1,9 @@
 // import '@babel/polyfill';
 import dva from 'dva';
+import { reducer as formReducer } from 'redux-form';
 import createHistory from 'history/createBrowserHistory';
-// import token from './models/token'
-// import version from './models/version'
+// import token from './reduces/token'
+// import version from './reduces/version'
 let options = {
   basename:''  //organService
 };
@@ -14,10 +15,17 @@ const history = createHistory(options);
 // 1. Initialize
 let app;
 if(process.env.API_ENV==='devDist'){
-   app = dva();
+   app = dva({
+    extraReducers: {
+      form: formReducer,
+    },
+  });
 }else{
   app = dva({
-    history: history
+    history: history,
+     extraReducers: {
+      form: formReducer,
+    },
   });
 }
 

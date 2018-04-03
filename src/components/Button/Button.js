@@ -1,6 +1,9 @@
 // import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
 import React, { Component } from 'react';
 import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import { classnames } from 'classnames';
+
+import './button.less'
 
 export default class Btn extends Component {
     constructor(props, context) {
@@ -9,10 +12,12 @@ export default class Btn extends Component {
     }
 
     render() {
-        let {type,onClick,className} = this.props;
-        if(!type){
+        let classNames = require('classnames');
+        let { type, onClick, className } = this.props;
+        if (!type) {
             type = 'primary'
         }
+        let btnClass = classNames('common-btn',className);
         return (
             //         <List style={{ margin: '5px 0', backgroundColor: 'white' }}>
             //             <List.Item
@@ -34,11 +39,12 @@ export default class Btn extends Component {
             //   </List.Item.Brief>
             //             </List.Item>
             //         </List>
-            <WingBlank>
-                <Button className={className} type={type} onClick={onClick}>
-                    {this.props.children}
-                </Button> <WhiteSpace />
-            </WingBlank>
+            // <WingBlank>
+            <Button className={btnClass} type={type} onClick={onClick}>
+                {this.props.children}
+            </Button>
+            // <WhiteSpace />
+            // </WingBlank>
         )
     }
 }
