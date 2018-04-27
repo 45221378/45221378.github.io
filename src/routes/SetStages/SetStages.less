@@ -2,6 +2,9 @@
     &-content{
         padding: 10px 0 0;
         &-input{
+            .am-textarea-item{
+                padding-right: 15px;
+            }
             .am-textarea-label{
                 height: 50px;
                 line-height: 50px;
@@ -13,7 +16,9 @@
                 height: 100%;
                 display: flex;
                 align-items: center;
-                padding-right: 15px;
+            }
+            .am-textarea-clear{
+                margin: 0;
             }
             textarea{
                 font-size: 12px;
@@ -28,11 +33,17 @@
                 font-size: 14px;
                 color: @font-666;
             }
-            .am-input-control {
-                input::-webkit-input-placeholder,input::-moz-input-placeholder,input::-ms-input-placeholder{
-                    color: @placeholder-color;
-                    font-size: 14px;
-                }
+            .am-input-control input::-webkit-input-placeholder{
+                color: @placeholder-color;
+                font-size: 14px;
+            }
+            .am-input-control input::-moz-input-placeholder{
+                color: @placeholder-color;
+                font-size: 14px;
+            }
+            .am-input-control input::-ms-input-placeholder{
+                color: @placeholder-color;
+                font-size: 14px;
             }
         }
         .am-list-item {

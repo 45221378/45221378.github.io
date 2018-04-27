@@ -15,61 +15,66 @@
         }
     }
     &-content{
-        height: 100vh;
-        position: relative;
-        overflow: auto;
-        &-wrapper{
-            padding-bottom: 60px;
-            .am-search{
-                background-color: @bg-white;
+        .am-search{
+            background-color: @bg-white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+        }
+        .am-search-cancel{
+            color: @placeholder-color;
+            font-size: 12px;
+        }
+        .am-search-input{
+            background-color: @bg-f5;
+            border-radius: 15px;
+            .am-search-clear{
+                top: 7px;
+                right: 3px;
             }
-            .am-search-cancel{
-                color: @placeholder-color;
+            input{
                 font-size: 12px;
+                color: @font-666;
             }
-            .am-search-input{
-                background-color: @bg-f5;
-                border-radius: 15px;
-                .am-search-clear{
-                    top: 7px;
-                    right: 3px;
+            .am-search-synthetic-ph {
+                min-width: 120px;
+                line-height: 28px;
+                height: 28px;
+                &-icon{
+                    display: inline-block;
+                    height: 12px;
+                    width: 12px;
+                    margin-top: 2px;
+                    background-size: cover;
+                    vertical-align: top;
                 }
-                input{
+                &-placeholder{
+                    display: inline-block;
+                    height: 16px;
+                    line-height: 16px;
                     font-size: 12px;
-                    color: @font-666;
+                    color: @placeholder-color;
+                    vertical-align: top;
                 }
-                .am-search-synthetic-ph {
-                    min-width: 120px;
-                    line-height: 28px;
-                    height: 28px;
-                    &-icon{
-                        display: inline-block;
-                        height: 12px;
-                        width: 12px;
-                        margin-top: 2px;
-                        background-size: cover;
-                        vertical-align: top;
-                    }
-                    &-placeholder{
-                        display: inline-block;
-                        height: 16px;
-                        line-height: 16px;
-                        font-size: 12px;
-                        color: @placeholder-color;
-                        vertical-align: top;
-                    }
-                    &-container{
-                        height: 16px;
-                        line-height: 16px;
-                        display: inline-block;
-                    }
+                &-container{
+                    height: 16px;
+                    line-height: 16px;
+                    display: inline-block;
                 }
             }
         }
+        &-wrapper{
+            height: 100%;
+            overflow: auto;
+            
+        }
         &-list{
-            background-color: @bg-white;
+            padding-top: 44px;
             li{
                 border-bottom: 1px solid @border-color;/*no*/
+                background-color: @bg-white;
                 &:nth-last-of-type(1){
                     border-bottom: none;
                 }
@@ -108,11 +113,20 @@
                 }
             }
         }
-        .am-button-primary{
-            position: fixed !important;
-            left: 10px;
-            right: 10px;
-            bottom: 20px;
+        .addGoodBtn {
+            position: fixed;
+            right: 18px;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            z-index: 2;
+            background: linear-gradient(to bottom,#FB6D6D,#ED5252);
+            border-radius: 50%;
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            line-height: 18px;
+            color: @bg-white;
         }
     }
     .am-button-primary{

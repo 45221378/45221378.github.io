@@ -5,10 +5,10 @@ import { Btn } from './../../components';
 
 
 export default class Success extends React.Component {
-    constructor(props, context) {
-        console.log(props);
-        super(props, context)
-    }
+    // constructor(props, context) {
+    //     // console.log(props);
+    //     super(props, context)
+    // }
 
     toLogin=()=>{
         const {history} = this.props;

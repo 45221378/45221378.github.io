@@ -1,15 +1,15 @@
 // import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
 import React, { Component } from 'react';
-import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
-import { classnames } from 'classnames';
+import { Button } from 'antd-mobile';
+// import { classnames } from 'classnames';
 
 import './button.less'
 
 export default class Btn extends Component {
-    constructor(props, context) {
-        super(props, context)
-        console.log(props);
-    }
+    // constructor(props, context) {
+    //     super(props, context)
+    //     // console.log(props);
+    // }
 
     render() {
         let classNames = require('classnames');

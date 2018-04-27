@@ -10,7 +10,7 @@ module.exports = {
     "@font-0090F2": "#0090F2",
     "@border-color":"#DFDFDF",
     "@border-color-footer":"#CECECE",
-    "@btn-bg-linear":"linear-gradient(left,#00AEFF,#0090F2)",
+    "@btn-bg-linear":"linear-gradient(to right,#00AEFF,#0090F2)",
     "@btn-blue":"rgba(0,144,242,1)",
     "@btn-box-shadow":"0 3px 3px rgba(0,174,225,.2)",
     "@mask-bg":"rgba(0,0,0,0.61) !important",

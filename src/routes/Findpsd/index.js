@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, Switch } from 'dva/router'
+import { Route, Switch } from 'dva/router'
 import Form from './form';
 import Success from './success';
 

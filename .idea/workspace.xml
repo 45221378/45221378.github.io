@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c805237c-532c-4f9c-a389-0b22df25db0d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/token.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Uploader/uploader.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/vendor/webuploader.html5only.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/routes/Filldata/FillPeople/fillPeopleForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/vendor/webuploader.html5only.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/utils/getParam.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/utils/ajaxNoLoading.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Uploader/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/routes/Filldata/FillPeople/fillPeople.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/ajax.js" afterPath="$PROJECT_DIR$/src/utils/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/SetStages/index.js" afterPath="$PROJECT_DIR$/src/routes/SetStages/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Button/button.less" afterPath="$PROJECT_DIR$/src/components/Button/button.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Findpsd/form.js" afterPath="$PROJECT_DIR$/src/routes/Findpsd/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Button/dashedBtn.js" afterPath="$PROJECT_DIR$/src/components/Button/dashedBtn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/UploadVoucher/index.js" afterPath="$PROJECT_DIR$/src/routes/UploadVoucher/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Calc/index.js" afterPath="$PROJECT_DIR$/src/routes/Calc/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/OneKey/index.js" afterPath="$PROJECT_DIR$/src/routes/OneKey/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Filldata/FillSame/fillSame.js" afterPath="$PROJECT_DIR$/src/routes/Filldata/FillSame/fillSame.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Receivables/Bond.js" afterPath="$PROJECT_DIR$/src/routes/Receivables/Bond.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/Home/home.less" afterPath="$PROJECT_DIR$/src/routes/Mine/Home/home.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Input/FormItem.js" afterPath="$PROJECT_DIR$/src/components/Input/FormItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SelectPicker/index.js" afterPath="$PROJECT_DIR$/src/components/SelectPicker/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/ChangePsd/changePsd.js" afterPath="$PROJECT_DIR$/src/routes/Mine/ChangePsd/changePsd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Home/index.js" afterPath="$PROJECT_DIR$/src/routes/Home/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/SetStages/SetStages.less" afterPath="$PROJECT_DIR$/src/routes/SetStages/SetStages.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Space/index.js" afterPath="$PROJECT_DIR$/src/components/Space/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Filldata/FillPeople/fillcontacts.js" afterPath="$PROJECT_DIR$/src/routes/Filldata/FillPeople/fillcontacts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/StageSuccess/StageSuccess.less" afterPath="$PROJECT_DIR$/src/routes/StageSuccess/StageSuccess.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Receivables/index.js" afterPath="$PROJECT_DIR$/src/routes/Receivables/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/organInfo.js" afterPath="$PROJECT_DIR$/src/models/organInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/Home/home.js" afterPath="$PROJECT_DIR$/src/routes/Mine/Home/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/OneKey/OneKey.less" afterPath="$PROJECT_DIR$/src/routes/OneKey/OneKey.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Order/order.less" afterPath="$PROJECT_DIR$/src/routes/Order/order.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router.js" afterPath="$PROJECT_DIR$/src/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/Search/search.less" afterPath="$PROJECT_DIR$/src/routes/Mine/Search/search.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/Myshop/myshop.js" afterPath="$PROJECT_DIR$/src/routes/Mine/Myshop/myshop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Goods/goods.less" afterPath="$PROJECT_DIR$/src/routes/Goods/goods.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Message/index.js" afterPath="$PROJECT_DIR$/src/routes/Message/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Message/Msglist/msglist.js" afterPath="$PROJECT_DIR$/src/routes/Message/Msglist/msglist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Receivables/Other.js" afterPath="$PROJECT_DIR$/src/routes/Receivables/Other.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/SearchDetail/searchDetail.js" afterPath="$PROJECT_DIR$/src/routes/Mine/SearchDetail/searchDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/validate.js" afterPath="$PROJECT_DIR$/src/utils/validate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Receivables/Receivables.less" afterPath="$PROJECT_DIR$/src/routes/Receivables/Receivables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/index.js" afterPath="$PROJECT_DIR$/src/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Filldata/FillOther/fillOther.js" afterPath="$PROJECT_DIR$/src/routes/Filldata/FillOther/fillOther.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/config.js" afterPath="$PROJECT_DIR$/src/utils/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SelectPicker/selectpicker.less" afterPath="$PROJECT_DIR$/src/components/SelectPicker/selectpicker.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Filldata/index.js" afterPath="$PROJECT_DIR$/src/routes/Filldata/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Order/OrderDetail/orderDetail.js" afterPath="$PROJECT_DIR$/src/routes/Order/OrderDetail/orderDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Footer/index.js" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Main/index.js" afterPath="$PROJECT_DIR$/src/routes/Main/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Message/messageCenter.less" afterPath="$PROJECT_DIR$/src/routes/Message/messageCenter.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/OrganNotice/index.js" afterPath="$PROJECT_DIR$/src/routes/OrganNotice/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/Myshop/myshop.less" afterPath="$PROJECT_DIR$/src/routes/Mine/Myshop/myshop.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/index.js" afterPath="$PROJECT_DIR$/src/components/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Message/Msglist/messageDetail.js" afterPath="$PROJECT_DIR$/src/routes/Message/Msglist/messageDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Goods/index.js" afterPath="$PROJECT_DIR$/src/routes/Goods/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/StageSuccess/index.js" afterPath="$PROJECT_DIR$/src/routes/StageSuccess/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Mine/Search/search.js" afterPath="$PROJECT_DIR$/src/routes/Mine/Search/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Order/index.js" afterPath="$PROJECT_DIR$/src/routes/Order/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/UploadVoucher/UploadVoucher.less" afterPath="$PROJECT_DIR$/src/routes/UploadVoucher/UploadVoucher.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/AddGood/addGood.less" afterPath="$PROJECT_DIR$/src/routes/AddGood/addGood.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Receivables/Payment.js" afterPath="$PROJECT_DIR$/src/routes/Receivables/Payment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Message/Noticelist/noticeDetail.js" afterPath="$PROJECT_DIR$/src/routes/Message/Noticelist/noticeDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Filldata/filldata.less" afterPath="$PROJECT_DIR$/src/routes/Filldata/filldata.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/styles/common/theme.less" afterPath="$PROJECT_DIR$/src/assets/styles/common/theme.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/UploadVoucher/UploadPhotos.js" afterPath="$PROJECT_DIR$/src/routes/UploadVoucher/UploadPhotos.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Login/index.js" afterPath="$PROJECT_DIR$/src/routes/Login/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Receivables/Rebate.js" afterPath="$PROJECT_DIR$/src/routes/Receivables/Rebate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/AddGood/index.js" afterPath="$PROJECT_DIR$/src/routes/AddGood/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Findpsd/findPsd.less" afterPath="$PROJECT_DIR$/src/routes/Findpsd/findPsd.less" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/Message/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="msglist.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/Message/Msglist/msglist.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/routes/Message/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="804" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Code quality toolsCSS</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Stylelint</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="45221378.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="45221378.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="45221378.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="45221378.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="45221378.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="45221378.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="45221378.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="45221378.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="Message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="45221378.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="45221378.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="Message" type="462c0819:PsiDirectoryNode" />
+              <item name="Msglist" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c805237c-532c-4f9c-a389-0b22df25db0d" name="Default" comment="" />
+      <created>1524133140322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524133140322</updated>
+      <workItem from="1524133141601" duration="2691000" />
+      <workItem from="1524189206493" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2693000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="804" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/routes/Message/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Message/Msglist/msglist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Message/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Message/Msglist/msglist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

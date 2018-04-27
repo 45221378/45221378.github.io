@@ -1,48 +1,78 @@
 import React from 'react';
 import classnames from 'classnames';
-import { connect } from 'dva';
-
+import ajax from '../../../utils/ajax'
+import moment from 'moment'
 
 export default class MessageDetail extends React.Component{
   constructor(props){
     super(props)
+    this.state = {
+      messageId: props.match.params.detail,
+      msgDetail:[]
+    }
+  }
+  getmsgDetail=()=>{
+    ajax({
+      method: 'post',
+      url: '/mobile/messageDetail',
+      data: {
+        messageId: this.state.messageId,
+        phone: '15175188586',
+        type:1
+      }
+    }).then((response)=>{
+      this.setState({
+        msgDetail:response.messageInfo
+      })
+    })
+  }
+  //时间戳转化为时间格式
+  // trantime=(data)=>{
+  //   var date = new Date(data),
+  //     Y=date.getFullYear()+'-',
+  //     M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-',
+  //     D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ',
+  //     h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':',
+  //     m = (date.getMinutes() <10 ? '0' + date.getMinutes() : date.getMinutes()) + ':',
+  //     s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds())
+  //   return Y+M+D+h+m+s;
+  // }
 
+  componentWillMount(){
+    this.getmsgDetail();
   }
   render() {
     const {history} = this.props;
+    const {msgDetail} =this.state;
     const containClass = classnames({
-      // 'msg-notice': true,
-      // 'padL43': this.props.padL43,
       'msg-detail':true
     });
-    const data=
-      {id:'订单1',state: '1', time:'11:19',conteng:'客户【成成】订单【20180104164218313502】审核中，【需要同业账单】 。具体原因为：【已注册的同业信息有:微贷网,】' };
-    const obj = [
-      {imgUrl:require("../../../assets/images/shen.png"),state:"审核"},
-      {imgUrl:require("../../../assets/images/ju.png"),state:"拒单"},
-      {imgUrl:require("../../../assets/images/xia.png"),state:"下单"}
-    ];
-    console.log(data);
+    const obj = {
+      1:{imgUrl:require("../../../assets/images/ju.png"),state:"拒单"},
+      2:{imgUrl:require("../../../assets/images/shen.png"),state:"审核"},
+      3:{imgUrl:require("../../../assets/images/ju.png"),state:"公告"},
+      4:{imgUrl:require("../../../assets/images/ju.png"),state:"补足保证金"},
+      5:{imgUrl:require("../../../assets/images/xia.png"),state:"下单"},
+      6:{imgUrl:require("../../../assets/images/ju.png"),state:"逾期"},
+      7:{imgUrl:require("../../../assets/images/ju.png"),state:"回购"},
+    }
     return (
       <div className="msg-list">
         <header>
-          <aside>
-            <img src={obj[data.state].imgUrl} />
-          </aside>
           <article>
             <p>
-              <span>{obj[data.state-1].state}</span>
-              <span className="time">{data.time}</span>
+              {msgDetail.messageType&&<span>{obj[msgDetail.messageType].state}</span>}
+              <span className="time">{msgDetail.time}</span>
             </p>
           </article>
-          <p className="delete-right-p" onClick={()=>{history.push((`/orderDetail/${1}`))}}>
+          <p className="delete-right-p" onClick={()=>{history.push((`/orderDetail/${msgDetail.orderId}`))}}>
             <span>查看订单</span>
             <i className="iconfont icon-right"></i>
           </p>
         </header>
         <section  className={containClass}>
-          <article>{data.conteng}</article>
-          <span className="msg-time">2018-02-03 17:12</span>
+          <article>{msgDetail.message}</article>
+          <span className="msg-time">{moment(msgDetail.createTime).format('YYYY-MM-DD HH:mm')}</span>
         </section>
       </div>
     )

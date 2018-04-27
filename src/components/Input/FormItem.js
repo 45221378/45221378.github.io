@@ -1,48 +1,72 @@
 import React, { Component } from 'react';
 import 'antd-mobile/lib/input-item/style/css';
-import { Toast, Picker, List, InputItem } from 'antd-mobile';
-import classnames from 'classnames';
-import { change } from 'redux-form';
+import { Picker, List, InputItem, Modal } from 'antd-mobile';
+// import classnames from 'classnames';
+import { createForm } from 'rc-form';
 
+// import { change, initialize } from 'redux-form';
+
+@createForm()
 export default class FormItem extends Component {
-  constructor(props) {
-    super(props);
-    const { initialValue, initialId, meta: { dispatch, form }, input: { name } } = props;
-    this.state = {
-      'thisValue': initialValue ? initialValue : props.extra
-    }
-    // console.log(props);
-    if(initialValue&&initialId){
-      dispatch(change(form, name, initialId));
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  
+  // }
 
-  selectItem = (value) => {
-    // console.log(this.props, value[0]);
-    const { meta: { dispatch,form },arr,input:{name} } = this.props;
-     arr.forEach((ele, index) => {
-      if (value && ele.value == value) {
-         this.setState({
-           thisValue: ele.label
-         })
-      }
-    })
-    dispatch(change(form, name, value[0]));
-  }
+  // selectItem = (value) => {
+  //   console.log(this.props, value[0]);
+  //   const { meta: { dispatch, form }, arr, input: { name } } = this.props;
+  //   arr.forEach((ele, index) => {
+  //     if (value && ele.value == value) {
+  //       this.setState({
+  //         thisValue: ele.label
+  //       })
+  //     }
+  //   })
+  //   dispatch(change(form, name, value[0]));
+  // }
 
-  showTips = (tip,e) => {
-    console.log(e.target);
+  // saveValue = (value) => {
+  //   console.log(value);
+  //   const { meta: { dispatch, form }, arr, input: { name } } = this.props;
+  //   dispatch(change(form, name, value));
+  // }
+
+  showTips = (tip, e) => {
+    // console.log(e.target);
     e.stopPropagation();
-    Toast.info(tip);
+    // Toast.info(tip);
+
+    Modal.alert('', tip, [
+      { text: '知道了', onPress: () => { } },
+    ])
+  }
+
+  change = (val) => {
+    const { input: { onChange }, show } = this.props;
+    onChange(val);
+    if (show) {
+      show(val);  //显示贴息的输入框
+    }
   }
 
   render() {
     let classNames = require('classnames');
-    const { thisValue } = this.state;
-    // console.log(thisValue);
-    const {tips,className, label, type, placeholder, arr, title, extra, cols, disabled = false, cascade = true } = this.props;
+    // const { thisValue } = this.state;
+    // console.log(this.props);
+    const { tips, className, type, placeholder, maxLength, arr, title, extra, cols, disabled = false, cascade = true, input: { onChange, value, name } } = this.props;
+    // console.log(this.props);
+    const { getFieldProps } = this.props.form;
     // console.log(className);
-    let selectClass = classNames('select-picker',className);
+    let selectClass = classNames('select-picker', className);
+    let text = extra;
+    if (arr) {
+      arr.map(item => {
+        if (item.value === value) {
+           text = item.label;
+        }
+      })
+    }
     let itemHtml;
     switch (type) {
       /*case "hidden":
@@ -51,7 +75,7 @@ export default class FormItem extends Component {
       case "select":
         itemHtml =
           <div className={selectClass}>
-            <span className={thisValue == extra ? "select-picker-show placeholder" : "select-picker-show"}>{thisValue}</span>
+            <span className={text == extra ? "select-picker-show placeholder" : "select-picker-show"}>{text}</span>
             <Picker
               data={arr}
               title={title}
@@ -59,22 +83,26 @@ export default class FormItem extends Component {
               cols={cols}
               disabled={disabled}
               cascade={cascade}
-              onOk={v => this.selectItem(v)}
+              onOk={v => this.change(v[0])}
             >
-             
-            <List.Item arrow="horizontal">{title}{tips && <i className="iconfont icon-certificationHelp tips" onClick={e => this.showTips(tips,e)}></i>}</List.Item>
+              <List.Item arrow="horizontal">{title}{tips && <i className="iconfont icon-certificationHelp tips" onClick={e => this.showTips(tips, e)}></i>}</List.Item>
             </Picker>
           </div>
         break;
       default:
         itemHtml =
           <InputItem
+            {...getFieldProps(name, {
+              initialValue: value,
+            })}
             type={type}
             placeholder={placeholder}
-            clear
+            maxLength={maxLength}
+            // value={value}
+            // clear
             className={className}
-            onChange={(v) => { console.log('onChange', v); }}
-            onBlur={(v) => { console.log('onBlur', v); }}
+            onBlur={(v) => { onChange(v) }}
+          // onBlur={(v) => {this.saveValue(v)}}
           >{title}
           </InputItem>
         break;

@@ -24,26 +24,35 @@ export default class SelectPicker extends React.Component{
             }
         })
         this.state={
-            'thisValue':initValue?initValue:props.extra
+            'thisValue':initValue===''?props.extra:initValue
         }
     }
     getLabel=(val,arr)=>{
         let thisLabel = '';
         arr.forEach((ele,index)=>{
-            if(val&&ele.value == val){
+            if(val&&ele.value*1 === val*1){
                 thisLabel = ele.label;
             }
         })
+        // console.log(thisLabel);
         return thisLabel;
+    }
+    thisChange=(val)=>{
+        const {arr,callBack=null} = this.props;
+        this.setState({
+            'thisValue':this.getLabel(val,arr)
+        });
+        if(callBack){
+            callBack(val)
+        }
     }
     render(){
         const {thisValue} = this.state;
-        const {arr,title,extra,thisName,thisForm,cols,disabled=false,cascade=true,initialValue=[],callBack=null} = this.props;
+        const {arr,title,extra,thisName,thisForm,cols,disabled=false,cascade=true,initialValue=[],required=true} = this.props;
         const {getFieldProps} = thisForm;
-        const $this = this;
         return(
             <div className="select-picker">
-                <span className={thisValue==extra?"select-picker-show placeholder":"select-picker-show"}>{thisValue}</span>
+                <span className={thisValue===extra?"select-picker-show placeholder":"select-picker-show"}>{thisValue}</span>
                 <Picker
                     data={arr}
                     title={title}
@@ -52,8 +61,8 @@ export default class SelectPicker extends React.Component{
                     disabled={disabled}
                     cascade={cascade}
                     {...getFieldProps(thisName, {
-                        onChange(val){$this.setState({'thisValue':$this.getLabel(val,arr)});if(callBack){callBack(val)}}, // have to write original onChange here if you need
-                        rules: [{required: true}],
+                        onChange:this.thisChange, // have to write original onChange here if you need
+                        rules: [{required}],
                         initialValue: initialValue
                     })}
                 >

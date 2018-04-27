@@ -1,13 +1,79 @@
 .tables.goods {
     position: relative;
-    .orderList {
+    height: 100%;
+    .goodsList {
         top: 0;
-        padding-bottom: 46px;
+        padding-bottom: 50px;
+        padding-top: 0;
+        overflow: visible;
+        height: 100%;
+        .am-search {
+            background-color: @bg-f5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+        }
+        .am-search-start .am-search-synthetic-ph {
+            text-align: left;
+        }
+        .am-search-start .am-search-value {
+            padding-left: 30px!important;
+        }
+        .am-search-cancel {
+            color: @placeholder-color;
+            font-size: 12px;
+        }
+        .am-search-input {
+            border-radius: 15px;
+            .am-search-clear {
+                top: 7px;
+                right: 3px;
+            }
+            input {
+                font-size: 12px;
+                color: @font-666;
+                padding-left: 45px !important;
+            }
+            .am-search-synthetic-ph {
+                min-width: 240px;
+                line-height: 28px;
+                height: 28px;
+                &-icon {
+                    display: inline-block;
+                    height: 12px;
+                    width: 12px;
+                    margin-top: 2px;
+                    background-size: cover;
+                    vertical-align: top;
+                }
+                &-placeholder {
+                    display: inline-block;
+                    height: 16px;
+                    line-height: 16px;
+                    font-size: 12px;
+                    color: @placeholder-color;
+                    vertical-align: top;
+                }
+                &-container {
+                    height: 16px;
+                    line-height: 16px;
+                    display: inline-block;
+                }
+            }
+        }
+        .am-list-line {
+            &::after {
+                display: none !important;
+            }
+        }
         .li {
             padding: 0 10px;
             header {
                 padding-left: 0;
-                border-bottom: 1px solid @border-color ;/*no*/
+                border-bottom: 1px solid @border-color ;
+                /*no*/
                 .status {
                     color: @one-discount; // display: inline-block;
                     padding: 2px 10px;
@@ -20,12 +86,22 @@
             .order-name {
                 padding-left: 0;
                 clear: both;
+                padding-bottom: 5px;
+                &-num {
+                    float: right;
+                    font-size: 12px;
+                    color: @placeholder-color;
+                }
+                button {
+                    line-height: 28px;
+                }
             }
             .createTime {
                 color: @placeholder-color;
                 border-bottom: 1px solid @border-color;
                 /*no*/
                 padding-bottom: 12px;
+                margin-bottom: 12px;
             }
             .price {
                 color: #FF7524;
@@ -35,13 +111,45 @@
     .addGoodBtn {
         position: fixed;
         right: 18px;
-        bottom: 61px;
+        bottom: 51px;
         width: 60px;
         height: 60px;
         z-index: 2;
         img {
             width: 100%;
             height: 100%;
+        }
+    }
+    .spaceTips {
+        position: fixed;
+        bottom: 48px;
+    }
+}
+
+.loading-wrapper {
+    height: 34px;
+    padding-top: 10px;
+}
+
+.list-wrapper {
+    padding-top: 44px;
+    padding-bottom: 60px;
+    height: 100%;
+    overflow: auto;
+    &-loading {
+        text-align: center;
+        font-size: 12px;
+        color: @placeholder-color;
+        height: 24px;
+        span {
+            padding-left: 5px;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 16px;
+            height: 16px;
+        }
+        svg {
+            vertical-align: top;
         }
     }
 }

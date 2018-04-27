@@ -1,65 +1,18 @@
-import dynamic from 'dva/dynamic';
 import 'amfe-flexible';
-import './assets/styles/index.less';
-import { Router, Route, Switch } from 'dva/router'
-import {
-  Main,
-  Calc,
-  NoticeDetail,
-  OrderDetail,
-  Filldata,
-  Login,
-  FindPsd,
-  Fillpeople,
-  Fillsame,
-  Fillother,
-  OrganNotice,
-  OneKey,
-  SetStages,
-  StageSuccess,
-  Receivables,
-  MessageDetail,
-  ChangePsd,
-  Myshop,
-  Search,
-  AddGood,
-  SearchDetail,
-} from './routes';
+import React from 'react';
+import { PersistGate } from 'redux-persist/integration/react';
+import { createPersistorIfNecessary } from './index'
+// import {Toast} from 'antd-mobile'
+import App from './routes'
 
-function RouterConfig({ history, app}) {
-  const UploadVoucher = dynamic({
-    app,
-    component: () => import('./routes/UploadVoucher/index'),
-  });
-  return (
-    <Router history={history}>
-      <Switch>
-        <Route path="/messageDetail/:detail" exact component={MessageDetail} />
-        <Route path="/filldata/fillother/:otherToken?/:returnUrl?" exact component={Fillother} />
-        <Route path="/filldata/fillsame/:otherToken?/:returnUrl?" exact component={Fillsame} />
-        <Route path="/filldata/fillpeople/:otherToken?/:returnUrl?" exact component={Fillpeople} />
-        <Route path="/filldata/:otherToken?/:returnUrl?" exact component={Filldata} />
-        <Route path="/orderDetail/:orderId" exact component={OrderDetail} />
-        <Route path="/noticeDetail/:detailId" exact component={NoticeDetail} />
-        <Route path="/organNotice/:first?/:second?" component={OrganNotice} />
-        <Route path="/oneKey" exact component={OneKey} />
-        <Route path="/oneKey/setStages/:id?" exact component={SetStages} />
-        <Route path="/oneKey/stageSuccess/:id?" exact component={StageSuccess} />
-        <Route path="/receivables/:item?/:status?" component={Receivables} />
-        <Route path="/upload/:orderId?" component={UploadVoucher} />
-        <Route path="/main" component={Main} />
-        <Route path="/calc" component={Calc} />
-        <Route path="/login" component={Login} />
-        <Route path="/findPsd" component={FindPsd} />
-        <Route path="/mine/changePsd" component={ChangePsd} />
-        <Route path="/mine/myshop" component={Myshop} />
-        <Route path="/mine/search" component={Search} />
-        <Route path="/mine/searchDetail" component={SearchDetail} />
-        <Route path="/addGood" component={AddGood} />
-        <Route component={Main} />
-      </Switch>
-    </Router>
-  );
+import './assets/styles/index.less';
+
+function RouterConfig({ history,app}) {
+    return (
+      <PersistGate persistor={createPersistorIfNecessary(app._store)} loading={null}>
+        <App app={app} history={history}/>
+      </PersistGate>
+    );
 }
 
 export default RouterConfig;

@@ -1,53 +1,57 @@
 import axios from 'axios';
-import { shim } from 'promise.prototype.finally';
+import store,{history} from '../index';
 import { Toast } from 'antd-mobile';
-import store from '../index';
-import baseURL from './config';
-
+import qs from 'qs';
+import baseURL from '../utils/config';
+import md5 from 'md5/md5';
+import { shim } from 'promise.prototype.finally';
 shim();
 const ajax = axios.create({
-    baseURL,
+  baseURL,
+  transformRequest: [function (data) {
+    const { getState } = store;
+    const {token,organInfo:{organId='',phone=''}} = getState();
+    const assignData = Object.assign(data,{token,organId,phone});
+    const sortArr=Object.keys(assignData).sort()||[];
+    const str=sortArr.reduce((prev,current)=>(prev+=assignData[current]),'');
+    // console.log(sortArr);
+    // console.log(str);
+    assignData.sign=md5(str.trim());
+    return qs.stringify(assignData);
+  }]
 });
-ajax.interceptors.request.use(function (config) {
-  Toast.loading('正在加载',0);
-  return config;
-}, function (error) {
-  // 对请求错误做些什么
-  Toast.hide();
-  return Promise.reject(error);
-});
-const goLogin = ()=>{
-  setTimeout(()=>{
-    if(location.href.indexOf('login')===-1){
-      location.href='login'
-    }
-  },4000)
-};
 ajax.interceptors.response.use(function (response) {
-  let {head, body}=response.data;
-  if(head.retCode==='0000'){
-    Toast.hide();
-    return body;
+  const {auth={},head={}, body}=response.data;
+  const {timeout,token=''} = auth;
+  const {retcode,msg} = head;
+  const {dispatch} = store;
+  if (timeout){
+    Toast.fail('登录超时',2,function(){
+      dispatch({
+        type:'token/clean',
+      });
+      const basePath = location.href.split(history.location.pathname)[0];
+      location.href = basePath+'/login';
+    });
   }else{
-    const {msg} = head;
-    Toast.hide();
-    Toast.info(msg);
-    if(head.errCode==='1016'){
-      goLogin()
+    if(token.length>0){
+      dispatch({
+        type:'token/save',
+        payload:token
+      });
     }
-    return Promise.reject(head);
+    if(retcode==='0000'){
+      return body;
+    }else{
+      Toast.info(msg,3);
+      return Promise.reject(head);
+    }
   }
 }, function (error) {
   const {response,request} = error;
   const {status} = request;
   Toast.hide();
-  if(response){
-    const {head}=response.data;
-    Toast.info(head.msg);
-    if(head.errCode==='1002'||head.errCode==='1016'){
-      goLogin()
-    }
-  }else{
+  if(!response){
     Toast.offline(`${status}:网络连接失败`);
   }
   return Promise.reject(error);

@@ -1,12 +1,72 @@
 .tables {
-  .am-tabs-default-bar-tab-active {
-    color: @font-333 !important;
+  height: 100%;
+
+  .orderSearch{
+    .am-search-input{
+      border-radius: 15px;
+    }
+    .am-search-cancel{
+      color: @placeholder-color;
+      font-size: 12px;
+    }
+    .am-search-input{
+      border-radius: 15px;
+      .am-search-clear{
+        top: 7px;
+        right: 3px;
+      }
+      input{
+        font-size: 12px;
+        color: @font-666;
+        padding-left: 45px !important;
+      }
+      .am-search-synthetic-ph {
+        min-width: 240px;
+        line-height: 28px;
+        height: 28px;
+        &-icon{
+          display: inline-block;
+          height: 12px;
+          width: 12px;
+          margin-top: 2px;
+          background-size: cover;
+          vertical-align: top;
+        }
+        &-placeholder{
+          display: inline-block;
+          height: 16px;
+          line-height: 16px;
+          font-size: 12px;
+          color: @placeholder-color;
+          vertical-align: top;
+        }
+        &-container{
+          height: 16px;
+          line-height: 16px;
+          display: inline-block;
+        }
+      }
+    }
   }
-  .am-tabs-default-bar-tab{
-    color: @font-666;
-  }
-  .am-tabs-default-bar-content .am-tabs-default-bar-underline{
-    border: 1px solid #626262;
+  .fixed-top{
+    height: 100%;
+    .am-tabs{
+      position: fixed;
+      top:0;
+      left: 0;
+      right:0;
+      height:44px;
+      z-index: 999;
+    }
+    .am-tabs-default-bar-tab-active {
+      color: @font-333 !important;
+    }
+    .am-tabs-default-bar-tab{
+      color: @font-666;
+    }
+    .am-tabs-default-bar-content .am-tabs-default-bar-underline{
+      border: 1px solid #626262;
+    }
   }
   &-top {
     li{
@@ -21,67 +81,90 @@
     }
   }
   .orderList {
+    height: 100%;
+    .am-search{
+      background-color: #f5f5f5;
+      position: fixed;
+      top: 43px;
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
     width: 100%;
     z-index: 1;
-    position: fixed;
-    top: 44px;
-    bottom: 49px;
-    left: 0;
-    right: 0;
-    overflow: scroll;
-    .am-list-item{
-      padding:0;
-    }
-    .am-list-line{
-      padding:0;
-    }
-    .am-list-body{
-      background: #f5f5f5;
-    }
-    .li {
-      background: @bg-white;
-      position: relative;
-      margin-bottom: 10px;
-      img {
-        position: absolute;
-        width: 84px;
-        height: 84px;
-        right: 6px;
-        top: 6px;
+    //padding:44px 0 49px 0;
+    //overflow: scroll;
+    padding-top: 44px;
+    .list-wrapper{
+      padding-top: 44px;
+      padding-bottom: 0px;
+      height: 100%;
+      overflow: auto;
+      .am-list-item{
+        padding:0;
       }
-      header {
-        height: 50px;
-        line-height: 50px;
-        font-size: 14px;
-        color: @font-333;
-        border-bottom: 1px dashed #ccc;
-        padding-left: 16px;
+      .am-list-line{
+        padding:0;
       }
-      .order-name {
-        padding: 12px 10px 16px 16px;
-        p {
-          font-size: 12px;
-          color: @font-666;
-          margin-bottom: 10px;
+      .am-list-body{
+        background: #f5f5f5;
+        padding-bottom: 10px;
+      }
+      .li {
+        background: @bg-white;
+        position: relative;
+        margin-bottom: 10px;
+        &:nth-last-of-type(1){
+          margin-bottom: 0;
         }
-        .money {
-          font-size: 16px;
-          color: #ff7524;
+        img {
+          position: absolute;
+          width: 84px;
+          height: 84px;
+          right: 6px;
+          top: 6px;
         }
-        button {
-          width: 72px;
-          height: 30px;
-          line-height: 30px;
-          text-align: center;
-          font-size: 12px;
-          color: #fff;
-          margin-left: 20px;
-          background: @btn-blue;
-          border-radius: 4px;
-          float: right;
+        header {
+          height: 50px;
+          line-height: 50px;
+          font-size: 14px;
+          color: @font-333;
+          border-bottom: 1px dashed #ccc;
+          padding-left: 16px;
+          .showState{
+            float: right;
+            font-size: 14px;
+            color: @font-333;
+            padding-right: 16px;
+          }
+        }
+        .order-name {
+          padding: 12px 10px 16px 16px;
+          p {
+            font-size: 12px;
+            color: @font-666;
+            margin-bottom: 10px;
+          }
+          .money {
+            font-size: 16px;
+            color: #ff7524;
+          }
+          button {
+            width: 72px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            margin-left: 20px;
+            background: @btn-blue;
+            border-radius: 4px;
+            float: right;
+          }
         }
       }
     }
+
   }
 }
 .search .am-search-input .am-search-synthetic-ph {
@@ -91,13 +174,13 @@
 //订单详情
 .orderDetail{
   background: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 63px;
-  left:0;
-  right: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
+  //position: absolute;
+  //top: 0;
+  //bottom: 63px;
+  //left:0;
+  //right: 0;
+  //overflow-y: auto;
+  //overflow-x: hidden;
   margin: 10px 10px 0 10px;
   .img-state{
     position: absolute;
@@ -106,20 +189,27 @@
     height: 84px;
     width: 84px;
   }
-  h6{
+  .order-status{
     font-size: 16px;
     color: @font-666;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #dfdfdf;
     height: 50px;
     line-height: 50px;
-    margin-left: 12px;
+    padding-left: 12px;
+    span{
+      float: right;
+      font-size: 14px;
+      color: @font-666;
+      padding-right: 12px;
+    }
   }
   section{
-    padding: 12px;
-    border-bottom: 1px solid #ccc;
+    padding: 12px 0;
+    margin: 0 12px;
+    border-bottom: 1px solid #dfdfdf;
     position: relative;
     p{
-      font-size: 12px;
+      font-size: 15px;
       color: @font-666;
       margin-bottom: 5px;
     }
@@ -138,7 +228,7 @@
     transform: rotateZ(45deg);
     bottom: -5px;
     border-radius: 50%;
-    left: -5px;
+    left: -17px;
   }
   section::after{
     content: '';
@@ -150,34 +240,35 @@
     -webkit-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
     bottom: -5px;
-    right: -5px;
+    right: -17px;
     border-radius: 50%;
   }
 
   .order-time{
-    padding: 12px;
+    padding: 12px 0;
     position: relative;
     .leavemsg{
       margin-top: 6px;
       span{
-        font-size: 12px;
+        font-size: 15px;
         color: @font-666;
         margin-bottom: 5px;
         vertical-align: top;
       }
-      textarea{
+      .textarea{
         height: 70px;
-        width: 266px;
+        width: 246px;
         background:rgba(245,245,245,1);
         border: none;
         color: #666;
-        font-size: 12px;
+        font-size: 15px;
         padding: 4px;
         border-radius: 4px;
+        display: inline-block;
       }
     }
     p{
-      font-size: 12px;
+      font-size: 15px;
       color: @font-666;
       margin-bottom: 5px;
     }
@@ -185,28 +276,34 @@
 
 
   .voucher{
-    padding: 12px 12px 21px 12px;
+    padding: 12px 0 21px 0;
+    margin: 0 12px;
+    border-top: 1px solid #dfdfdf;
     div{
       overflow: hidden;
-      width: 260px;
       display: inline-block;
 
       img{
-        height: 80px;
-        width: 80px;
+        height: 78px;
+        width: 78px;
         float: left;
-        margin-right: 6px;
-
+        margin: 0 6px 4px 0;
+      }
+      img:nth-child(4){
+        margin-right: 0;
+      }
+      img:nth-child(8){
+       margin-right: 0;
       }
     }
     span{
-      font-size: 12px;
+      font-size: 15px;
       color: @font-666;
       margin-bottom: 5px;
       vertical-align: top;
     }
     p{
-      font-size: 12px;
+      font-size: 15px;
       color: @font-666;
       margin-bottom: 5px;
     }
@@ -298,4 +395,22 @@
 
   }
 
+}
+.padl6{
+  padding-left: 6px;
+}
+.order .am-list-body::before{
+  opacity: 0;
+}
+.order .am-list-body::after{
+  opacity: 0;
+}
+.height100{
+  height: 100%;
+}
+.order-loading{
+  padding-bottom: 12px;
+}
+.type3 .list-wrapper{
+  padding-top: 10px !important;
 }

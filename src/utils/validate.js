@@ -25,6 +25,8 @@ export default function validate({validateType={},rules={},errorTip={},nullTip={
         "msgcode": /^(\d{4})$/,
         "bank":/^[0-9]{16,19}$/,
         "pwd":/^[0-9a-zA-Z]{6,8}$/,
+        "password": /^[0-9a-zA-Z]{6,20}$/,
+        "smsCode": /^(\d{6})$/,
         "idcard": function (value, values) {
             //该方法由佚名网友提供;
             var Wi = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1]; // 加权因子;

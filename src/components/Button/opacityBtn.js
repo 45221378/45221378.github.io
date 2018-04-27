@@ -1,13 +1,8 @@
 import React from 'react';
-import { connect } from 'dva';
-import { Button, WhiteSpace, WingBlank} from 'antd-mobile';
-import { classnames } from 'classnames';
+import { Button} from 'antd-mobile';
 
 import './button.less'
 export default class Opacitybtn extends React.Component{
-  constructor(props, context) {
-    super(props, context)
-  }
   render() {
     let classNames = require('classnames');
     let { type, onClick, className } = this.props;

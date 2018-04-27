@@ -11,9 +11,8 @@ export default class Footer extends React.Component{
         activeKey: 'home',
       };
     }
-    componentDidMount(){
-        const {location:{pathname}} = this.props;
-        console.log(pathname);
+    setActive=(props)=>{
+        const {location:{pathname}} = props;
         let thisKey = '';
         switch(pathname){
             case '/':
@@ -22,10 +21,10 @@ export default class Footer extends React.Component{
             case '/goods':
                 thisKey = 'goods';
                 break;
-            case '/Order':
+            case '/orderList':
                 thisKey = 'order';
                 break;
-            case '/Message':
+            case '/messageCenter':
                 thisKey = 'message';
                 break;
             case '/mine':
@@ -35,37 +34,41 @@ export default class Footer extends React.Component{
                 thisKey = 'home';
                 break;
         }
-        console.log(thisKey);
         this.setState({
             activeKey:thisKey
         })
     }
+    componentWillReceiveProps(props){
+        this.setActive(props);
+    }
+    componentDidMount(){
+        this.setActive(this.props);
+    }
     render(){
         const {activeKey} = this.state;
-        console.log(activeKey);
-      return (
-        <div className="footer-nav clearfix">
-            <Link className={activeKey==='home'?'nav-active':''} key="home" to="/">
-                <i className={`iconfont ${activeKey==='home'?"icon-shouye":"icon-shouye1"}`}></i>
-                <span>首页</span>
-            </Link>
-            <Link className={activeKey==='goods'?'nav-active':''} key="goods" to="/goods">
-                <i className={`iconfont ${activeKey==='goods'?"icon-shangpin":"icon-shangpin1"}`}></i>
-                <span>商品</span>
-            </Link>
-            <Link className={activeKey==='order'?'nav-active':''} key="order" to="/main/orderList">
-                <i className={`iconfont ${activeKey==='order'?"icon-dingdan1":"icon-dingdan"}`}></i>
-                <span>订单</span>
-            </Link>
-            <Link className={activeKey==='message'?'nav-active':''} key="message" to="/main/MessageCenter">
-                <i className={`iconfont ${activeKey==='message'?"icon-xiaoxi":"icon-xiaoxi1"}`}></i>
-                <span>消息</span>
-            </Link>
-            <Link className={activeKey==='mine'?'nav-active':''} key="mine" to="/mine">
-                <i className={`iconfont ${+activeKey==='mine'?"icon-geren":"icon-geren1"}`}></i>
-                <span>我的</span>
-            </Link>
-        </div>
-      );
+        return (
+            <div className="footer-nav clearfix">
+                <Link className={activeKey==='home'?'nav-active':''} key="home" to="/">
+                    <i className={`iconfont ${activeKey==='home'?"icon-shouye":"icon-shouye1"}`}></i>
+                    <span>首页</span>
+                </Link>
+                <Link className={activeKey==='goods'?'nav-active':''} key="goods" to="/goods">
+                    <i className={`iconfont ${activeKey==='goods'?"icon-shangpin":"icon-shangpin1"}`}></i>
+                    <span>商品</span>
+                </Link>
+                <Link className={activeKey==='order'?'nav-active':''} key="order" to="/orderList">
+                    <i className={`iconfont ${activeKey==='order'?"icon-dingdan1":"icon-dingdan"}`}></i>
+                    <span>订单</span>
+                </Link>
+                <Link className={activeKey==='message'?'nav-active':''} key="message" to="/messageCenter">
+                    <i className={`iconfont ${activeKey==='message'?"icon-xiaoxi":"icon-xiaoxi1"}`}></i>
+                    <span>消息</span>
+                </Link>
+                <Link className={activeKey==='mine'?'nav-active':''} key="mine" to="/mine">
+                    <i className={`iconfont ${+activeKey==='mine'?"icon-geren":"icon-geren1"}`}></i>
+                    <span>我的</span>
+                </Link>
+            </div>
+        );
     }
   }

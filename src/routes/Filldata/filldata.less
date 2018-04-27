@@ -34,8 +34,11 @@
 }
 //补充联系人资料
 .fill-people{
+  height: 100%;
   .contain-ul{
-    padding-bottom: 63px;
+    padding-bottom: 74px;
+    overflow: auto;
+    height: 100%;
     .already-fill{
       li{
         margin-top: 12px;
@@ -62,7 +65,7 @@
       li{
         background: #fff;
         margin-top: 10px;
-        form{
+        div{
           label{
             font-size: 14px;
             color: @font-333;
@@ -86,6 +89,7 @@
               text-align: right;
               flex: 1;
               font-size: 14px;
+              height: 48px;
             }
             input::-webkit-input-placeholder{
               color: #9B9B9B;
@@ -114,70 +118,204 @@
     }
   }
 }
-//补充同业资料或补充其他信息
+//补充同业资料
 .fill-same{
-  padding-bottom: 63px;
-  overflow-y: auto;
+  height: 100vh;
   .fill-tips{
     color: #7db4fe;
     font-size: 12px;
     padding: 10px 10px 0 10px;
   }
-  .already-fill{
-    .li{
-      margin-top: 12px;
-      background: #fff;
-      p{
-        font-size: 14px;
-        color: @font-333;
-        height: 50px;
-        line-height: 50px;
-        margin: 0 10px;
-        border-bottom: 1px solid #dfdfdf;
-        &:extend(.clearfix);
-        span{
-          float: right;
-        }
-      }
-
-
-      p:last-child{
-        border-bottom: none;
-      }
-    }
-    .fill-other-li{
-      width:100%;
-      min-height: 164px;
-      overflow: hidden;
-      padding-bottom: 11px;
-      article{
-        line-height: 18px;
-        padding-top: 10px;
-        font-size: 14px;
-        color: @font-333;
-        margin: 0 10px;
-        height: 74px;
-      }
-    }
-  }
-  .ready-fill{
-    padding: 0 10px;
-    li{
-      background: #fff;
-      margin-top: 10px;
-      padding-bottom: 11px;
-      min-height: 164px;
-      overflow: hidden;
-      form{
-        label{
+  .contain-ul{
+    padding-bottom: 73px;
+    overflow-y: auto;
+    height: 100%;
+    .already-fill{
+      li{
+        margin-top: 12px;
+        background: #fff;
+        p{
           font-size: 14px;
           color: @font-333;
           height: 50px;
-          line-height: 28px;
+          line-height: 50px;
           margin: 0 10px;
           border-bottom: 1px solid #dfdfdf;
+          &:extend(.clearfix);
+          span{
+            float: right;
+          }
+        }
+        .account-img{
+          padding-bottom: 16px;
+          span{
+            font-size: 14px;
+            color: @font-333;
+            margin: 11px 10px 7px 0;
+            display: block;
+            line-height: 20px;
+          }
+          img{
+            border: 1px solid #dfdfdf;
+            width: 80px;
+            height:80px;
+            margin: 0 8px 0 0;
+            position: relative;
+            float: left;
+          }
+          img:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+      .fill-other-li{
+        width:100%;
+        min-height: 164px;
+        overflow: hidden;
+        padding-bottom: 11px;
+        article{
+          line-height: 18px;
+          padding-top: 10px;
+          font-size: 14px;
+          color: @font-333;
+          margin: 0 10px;
+          height: 74px;
+        }
+      }
+    }
+    .ready-fill{
+      padding: 0 10px;
+      li{
+        background: #fff;
+        margin-top: 10px;
+        padding-bottom: 11px;
+        min-height: 164px;
+        overflow: hidden;
+        .form{
+          label{
+            font-size: 14px;
+            color: @font-333;
+            height: 50px;
+            line-height: 28px;
+            margin: 0 10px;
+            border-bottom: 1px solid #dfdfdf;
+            display: block;
+            span{
+              display: inline-block;
+            }
+            .icon-right{
+              float: right;
+              font-size: 16px;
+            }
+            input{
+              float: right;
+              line-height: 28px;
+              border: none;
+              text-align: right;
+              width: 200px;
+              font-size: 14px;
+              height: 48px;
+            }
+            input::-webkit-input-placeholder{
+              color: #9B9B9B;
+            }
+          }
+          label:last-child{
+            border-bottom: none;
+          }
+        }
+        .close{
+          background:rgba(236,236,236,1);
+          height:25px;
+          width: 100%;
+          border-radius: 4px 4px 0px 0px ;
+          i{
+            color: #9B9B9B;
+            float: right;
+            font-size: 18px;
+            line-height: 25px;
+            padding: 0 12px 0 60px;
+          }
+        }
+        textarea{
+          font-size: 12px;
+          color: #9B9B9B;
+          padding: 10px;
+          width: 100%;
+          height: 100px;
+          border: none;
+        }
+
+      }
+    }
+  }
+}
+//补充其他信息
+.fill-other{
+  padding-bottom: 73px;
+  overflow-y: auto;
+  height: 100%;
+  .fill-tips{
+    color: #7db4fe;
+    font-size: 12px;
+    padding: 10px 10px 0 10px;
+  }
+  .contain-ul{
+    .already-fill{
+      &-li{
+        margin-top: 12px;
+        background: #fff;
+        p{
+          font-size: 14px;
+          color: @font-333;
+          height: 50px;
+          line-height: 50px;
+          margin: 0 10px;
+          border-bottom: 1px solid #dfdfdf;
+          &:extend(.clearfix);
+          span{
+            float: right;
+          }
+        }
+
+
+        p:last-child{
+          border-bottom: none;
+        }
+      }
+      .fill-other-li{
+        width:100%;
+        min-height: 164px;
+        overflow: hidden;
+        padding-bottom: 11px;
+        margin-bottom: 11px;
+        background: #fff;
+        article{
+          line-height: 18px;
+          padding-top: 10px;
+          font-size: 14px;
+          color: @font-333;
+          margin: 0 10px;
+          height: 74px;
+        }
+      }
+    }
+    .ready-fill{
+      padding: 0 10px;
+      li{
+        background: #fff;
+        margin-top: 10px;
+        //padding-bottom: 11px;
+        min-height: 164px;
+        overflow: hidden;
+        label{
+          font-size: 14px;
+          color: @font-333;
+          //height: 50px;
+          line-height: 28px;
+          margin: 0 10px;
+          //border-bottom: 1px solid #dfdfdf;
           display: block;
-          padding: 10px 0;
           span{
             display: inline-block;
           }
@@ -200,31 +338,29 @@
         label:last-child{
           border-bottom: none;
         }
-      }
-
-      .close{
-        background:rgba(236,236,236,1);
-        height:25px;
-        width: 100%;
-        border-radius: 4px 4px 0px 0px ;
-        i{
-          color: #9B9B9B;
-          float: right;
-          font-size: 18px;
-          line-height: 25px;
-          padding: 0 12px 0 60px;
+        .close{
+          background:rgba(236,236,236,1);
+          height:25px;
+          width: 100%;
+          border-radius: 4px 4px 0px 0px ;
+          i{
+            color: #9B9B9B;
+            float: right;
+            font-size: 18px;
+            line-height: 25px;
+            padding: 0 12px 0 60px;
+          }
         }
-      }
+        textarea{
+          font-size: 12px;
+          color: #9B9B9B;
+          padding: 10px 0;
+          width: 100%;
+          height: 64px;
+          border: none;
+        }
 
-      textarea{
-        font-size: 12px;
-        color: #9B9B9B;
-        padding: 10px;
-        width: 100%;
-        height: 100px;
-        border: none;
       }
-
     }
   }
 }
@@ -248,9 +384,47 @@
     z-index: 99;
   }
 }
+.add-img{
+  .upload-photos{
+    padding:0 0 0 6px;
+  }
+  .upload-photos-wrapper{
+    min-height: 100px;
+    box-shadow: none !important;
+  }
+  .upload-photos-list-img{
+    margin: 4px 4px 0 0;
+  }
+}
+.account-img{
+  //min-height: 130px;
+  font-size: 14px;
+  color: @font-333;
+  line-height: 28px;
+  margin: 0 10px;
+  display: block;
+  .upload-photos{
+    padding:0;
+  }
+  .upload-photos-wrapper{
+    min-height: 80px;
+    box-shadow: none !important;
+  }
+  .upload-photos-list{
+    padding:0;
+    .add-btn{
+      height: 20px;
+    }
+  }
+  .upload-photos-list-btn{
+    margin-left: 0;
+  }
+  .upload-photos-list-img{
+    margin: 4px 4px 4px 0;
+  }
+}
 //下啦选择框样式
 .relationship{
-  width:100%;
   .select-picker-show{
     right: 20px;
   }
@@ -266,5 +440,18 @@
         font-size: 14px;
       }
     }
+  }
+}
+.hidden{
+  overflow: hidden;
+}
+.label-people{
+  div{
+    flex: 1;
+  }
+  input{
+    position: absolute;
+    opacity:0;
+    right:10px;
   }
 }

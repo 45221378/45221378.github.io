@@ -17,13 +17,20 @@
             .marR(10px);
             .fs(30px);
         }
+        span.line {
+            display: inline-block;
+            width: 1px;
+            /*no*/
+            height: 20px;
+            background-color: #dfdfdf;
+        }
         span.text {
             color: @font-666;
-            .fs(18px); // font-size: 18px;
-            height: 20px;
-            display: inline-block;
-            .padL(10px);
-            border-left: 1px solid @border-color;
+            .fs(16px); // font-size: 18px;
+            // height: 20px;
+            // line-height: 20px;
+            .padL(10px); // border-left: 1px solid @border-color;
+            /*no*/
         }
     }
     &-form {
@@ -41,8 +48,10 @@
             box-sizing: border-box;
             .padLR(14px);
             i {
+                display: inline-block;
+                width: 25px;
                 .fs(18px);
-                .marR(5px);
+                // .marR(5px);
             }
             input {
                 border: none;
@@ -51,6 +60,8 @@
                 color: @font-333;
                 .placeholder(@font-999);
                 .fs(14px);
+                line-height: 20px;
+                padding: 9px 0;
             }
         }
         .btn-box {
@@ -88,7 +99,7 @@
         display: flex;
         &-show {
             // right: 0;
-            left: 0;
+            left: 2px;
             position: relative;
             padding: 0;
             top: 0;
@@ -96,6 +107,7 @@
             color: @font-333;
             &.placeholder {
                 color: @font-999;
+                left: 0;
             }
             +div {
                 // flex: 1;
